@@ -32,4 +32,4 @@
 
 ## 疑难杂症
 * [git设置代理](Notes/git设置代理.md)
-* [github打不开或者很慢](Notes/github打不开.md)
+* [github打不开打开太慢](Notes/github打不开打开太慢开.md)

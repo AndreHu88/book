@@ -30,3 +30,6 @@
 * 数据结构
 * 算法
 
+## 疑难杂症
+* [git设置代理](Notes/git设置代理.md)
+* [github打不开或者很慢](Notes/github打不开.md)

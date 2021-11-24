@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>OC消息机制 · 个人笔记</title>
+        <title>Runloop与线程 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -88,10 +88,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="runtime如何实现weak属性.html" />
+    <link rel="next" href="iOS事件响应原理.html" />
     
     
-    <link rel="prev" href="OC方法调用过程.html" />
+    <link rel="prev" href="触摸事件传递和响应原理.html" />
     
 
     
@@ -226,9 +226,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.2.1" data-path="Category实现原理.html">
+        <li class="chapter " data-level="2.1.2.1" data-path="../Runtime/Category实现原理.html">
             
-                <a href="Category实现原理.html">
+                <a href="../Runtime/Category实现原理.html">
             
                     
                     Category的实现原理
@@ -239,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2.2" data-path="isa指针.html">
+        <li class="chapter " data-level="2.1.2.2" data-path="../Runtime/isa指针.html">
             
-                <a href="isa指针.html">
+                <a href="../Runtime/isa指针.html">
             
                     
                     isa指针
@@ -252,9 +252,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2.3" data-path="OC方法调用过程.html">
+        <li class="chapter " data-level="2.1.2.3" data-path="../Runtime/OC方法调用过程.html">
             
-                <a href="OC方法调用过程.html">
+                <a href="../Runtime/OC方法调用过程.html">
             
                     
                     OC方法调用过程
@@ -265,9 +265,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.1.2.4" data-path="OC消息机制.html">
+        <li class="chapter " data-level="2.1.2.4" data-path="../Runtime/OC消息机制.html">
             
-                <a href="OC消息机制.html">
+                <a href="../Runtime/OC消息机制.html">
             
                     
                     OC消息机制
@@ -278,9 +278,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2.5" data-path="runtime如何实现weak属性.html">
+        <li class="chapter " data-level="2.1.2.5" data-path="../Runtime/runtime如何实现weak属性.html">
             
-                <a href="runtime如何实现weak属性.html">
+                <a href="../Runtime/runtime如何实现weak属性.html">
             
                     
                     runtime如何实现weak属性
@@ -291,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.2.6" data-path="runtime具体应用.html">
+        <li class="chapter " data-level="2.1.2.6" data-path="../Runtime/runtime具体应用.html">
             
-                <a href="runtime具体应用.html">
+                <a href="../Runtime/runtime具体应用.html">
             
                     
                     runtime具体应用
@@ -323,9 +323,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.1.3.1" data-path="../Runloop/触摸事件传递和响应原理.html">
+        <li class="chapter " data-level="2.1.3.1" data-path="触摸事件传递和响应原理.html">
             
-                <a href="../Runloop/触摸事件传递和响应原理.html">
+                <a href="触摸事件传递和响应原理.html">
             
                     
                     触摸事件传递和响应原理
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.3.2" data-path="../Runloop/Runloop与线程.html">
+        <li class="chapter active" data-level="2.1.3.2" data-path="Runloop与线程.html">
             
-                <a href="../Runloop/Runloop与线程.html">
+                <a href="Runloop与线程.html">
             
                     
                     Runloop与线程
@@ -349,9 +349,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.3.3" data-path="../Runloop/iOS事件响应原理.html">
+        <li class="chapter " data-level="2.1.3.3" data-path="iOS事件响应原理.html">
             
-                <a href="../Runloop/iOS事件响应原理.html">
+                <a href="iOS事件响应原理.html">
             
                     
                     iOS事件响应原理
@@ -362,9 +362,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.3.4" data-path="../Runloop/runtime性能优化.html">
+        <li class="chapter " data-level="2.1.3.4" data-path="runtime性能优化.html">
             
-                <a href="../Runloop/runtime性能优化.html">
+                <a href="runtime性能优化.html">
             
                     
                     runtime性能优化
@@ -529,39 +529,6 @@
     
 
     
-        
-        <li class="header">疑难杂症</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../../../Notes/git设置代理.html">
-            
-                <a href="../../../Notes/git设置代理.html">
-            
-                    
-                    git设置代理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../../../Notes/github打不开.html">
-            
-                <a href="../../../Notes/github打不开.html">
-            
-                    
-                    github打不开或者很慢
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
 
     <li class="divider"></li>
 
@@ -590,7 +557,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >OC消息机制</a>
+        <a href="../../.." >Runloop与线程</a>
     </h1>
 </div>
 
@@ -608,7 +575,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#oc&#x6D88;&#x606F;&#x673A;&#x5236;"><b></b>OC&#x6D88;&#x606F;&#x673A;&#x5236;</a></li></ul></div><a href="#oc&#x6D88;&#x606F;&#x673A;&#x5236;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="oc&#x6D88;&#x606F;&#x673A;&#x5236;"><a name="oc&#x6D88;&#x606F;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#oc&#x6D88;&#x606F;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>OC&#x6D88;&#x606F;&#x673A;&#x5236;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#runloop&#x4E0E;&#x7EBF;&#x7A0B;"><b></b>Runloop&#x4E0E;&#x7EBF;&#x7A0B;</a></li></ul></div><a href="#runloop&#x4E0E;&#x7EBF;&#x7A0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="runloop&#x4E0E;&#x7EBF;&#x7A0B;"><a name="runloop&#x4E0E;&#x7EBF;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#runloop&#x4E0E;&#x7EBF;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>Runloop&#x4E0E;&#x7EBF;&#x7A0B;</h1>
 <script type="text/javascript">var className='atoc';</script>
                                 
                                 </section>
@@ -652,12 +619,12 @@
 
             
                 
-                <a href="OC方法调用过程.html" class="navigation navigation-prev " aria-label="Previous page: OC方法调用过程">
+                <a href="触摸事件传递和响应原理.html" class="navigation navigation-prev " aria-label="Previous page: 触摸事件传递和响应原理">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="runtime如何实现weak属性.html" class="navigation navigation-next " aria-label="Next page: runtime如何实现weak属性">
+                <a href="iOS事件响应原理.html" class="navigation navigation-next " aria-label="Next page: iOS事件响应原理">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -668,7 +635,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OC消息机制","level":"2.1.2.4","depth":3,"next":{"title":"runtime如何实现weak属性","level":"2.1.2.5","depth":3,"path":"Program/OC/Runtime/runtime如何实现weak属性.md","ref":"Program/OC/Runtime/runtime如何实现weak属性.md","articles":[]},"previous":{"title":"OC方法调用过程","level":"2.1.2.3","depth":3,"path":"Program/OC/Runtime/OC方法调用过程.md","ref":"Program/OC/Runtime/OC方法调用过程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","accordion","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"accordion":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"theme-comscore":{},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人网站":"http://sohod.cn"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"Program/OC/Runtime/OC消息机制.md","mtime":"2021-11-23T10:00:58.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-24T10:36:38.932Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Runloop与线程","level":"2.1.3.2","depth":3,"next":{"title":"iOS事件响应原理","level":"2.1.3.3","depth":3,"path":"Program/OC/Runloop/iOS事件响应原理.md","ref":"Program/OC/Runloop/iOS事件响应原理.md","articles":[]},"previous":{"title":"触摸事件传递和响应原理","level":"2.1.3.1","depth":3,"path":"Program/OC/Runloop/触摸事件传递和响应原理.md","ref":"Program/OC/Runloop/触摸事件传递和响应原理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","accordion","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"accordion":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"theme-comscore":{},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人网站":"http://sohod.cn"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"Program/OC/Runloop/Runloop与线程.md","mtime":"2021-11-23T13:31:01.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-24T09:34:56.052Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

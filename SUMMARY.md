@@ -32,4 +32,8 @@
 
 ## 疑难杂症
 * [git设置代理](Notes/git设置代理.md)
-* [github打不开打开太慢](Notes/github打不开打开太慢开.md)
+* [github打不开打开太慢](Notes/github打不开打开太慢.md)
+
+## 命令相关
+* [git命令](Command/git命令.md)
+* [gitbook使用](Command/gitbook使用.md)

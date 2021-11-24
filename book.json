@@ -1,0 +1,56 @@
+{
+    "title": "个人笔记",
+    "author": "Jack",
+    "plugins": [
+        "-lunr", 
+        "-search",
+        "search-plus",
+        "search-pro",
+        "advanced-emoji",
+        "include-codeblock",
+        "accordion",
+        "-sharing",
+        "local-video",
+        "simple-page-toc",
+        "back-to-top-button",
+        "expandable-chapters",
+        "chapter-fold",
+        "copy-code-button",
+        "favicon"
+    ],
+
+    "pluginsConfig": {
+
+        "autocover": {
+            "font": {
+                "size": null,
+                "family": "Impact",
+                "color": "#FFF"
+            },
+            "size": {
+                "w": 1800,
+                "h": 2360
+            },
+            "background": {
+                "color": "#09F"
+            }
+        },
+
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+
+        "favicon": {
+            "shortcut": "assets/images/favicon.ico",
+            "bookmark": "assets/images/favicon.ico",
+            "appleTouch": "assets/images/logo.png",
+            "appleTouchMore": {
+                "120x120": "assets/images/logo.png",
+                "180x180": "assets/images/logo.png"
+            }
+        }
+    }
+}
+
+

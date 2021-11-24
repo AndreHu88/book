@@ -1,6 +1,22 @@
 {
     "title": "个人笔记",
     "author": "Jack",
+    "description": "Jack Hu, 风车大战骑士",
+    "keywords": "markdown,gitbook,",
+    "language": "zh-hans",
+    "styles": {
+        "website": "./styles/website.css"
+    },
+    "links": {
+        "home": false,
+        "about": false,
+        "issues": false,
+        "contribute": false,
+        "sidebar": {
+            "个人网站": "http://sohod.cn"
+        }
+    },
+
     "plugins": [
         "-lunr", 
         "-search",
@@ -12,11 +28,14 @@
         "-sharing",
         "local-video",
         "simple-page-toc",
-        "back-to-top-button",
         "expandable-chapters",
         "chapter-fold",
-        "copy-code-button",
-        "favicon"
+        "favicon",
+        "hide-element",
+        "anchor-navigation-ex",
+        "code",
+        "atoc",
+        "theme-comscore"
     ],
 
     "pluginsConfig": {
@@ -49,6 +68,33 @@
                 "120x120": "assets/images/logo.png",
                 "180x180": "assets/images/logo.png"
             }
+        },
+
+        "hide-element": {
+            "elements": [".gitbook-link"]
+        },
+
+        "anchor-navigation-ex": {
+            "showLevel": false,
+            "showGoTop": true,
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+
+        "code": {
+            "copyButtons": true
+        },
+
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        },
+
+        "theme-default": {
+            "showLevel": false
         }
     }
 }

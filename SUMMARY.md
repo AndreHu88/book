@@ -2,9 +2,11 @@
 * [简介](README.md)
 
 ## 编程相关
-* [Objective-C](Program/OC/README.md)
+* Objective-C
     * 基本语法
-        * [Objective-C import 第三方库头文件总结](Program/OC/syntax/import第三方库.md) 
+        * [Objective-C简介](Program/OC/syntax/oc简介.md)
+        * [import 第三方库头文件总结](Program/OC/syntax/import第三方库.md) 
+        * [Xcode技巧和快捷键](Program/OC/syntax/Xcode技巧.md) 
     * Runtime
         * [Category的实现原理](Program/OC/Runtime/Category实现原理.md)
         * [isa指针](Program/OC/Runtime/isa指针.md)

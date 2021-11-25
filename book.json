@@ -11,10 +11,7 @@
         "home": false,
         "about": false,
         "issues": false,
-        "contribute": false,
-        "sidebar": {
-            "个人网站": "http://sohod.cn"
-        }
+        "contribute": false
     },
 
     "plugins": [
@@ -35,8 +32,21 @@
         "anchor-navigation-ex",
         "code",
         "atoc",
-        "theme-comscore"
+        "theme-comscore",
+        "theme-fexa"
     ],
+
+    "variables": {
+        "themeFexa":{
+            "nav":[
+                {
+                    "url":"http://sohod.cn",
+                    "target":"_blank",
+                    "name": "风车大战骑士"
+                }
+            ]
+        }
+    },
 
     "pluginsConfig": {
 
@@ -95,6 +105,12 @@
 
         "theme-default": {
             "showLevel": false
+        },
+
+        "theme-fexa":{
+            "search-placeholder":"输入关键字搜索", 
+            "logo":"./logo.png",
+            "favicon": "./favicon.ico"
         }
     }
 }

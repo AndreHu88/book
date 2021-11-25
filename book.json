@@ -11,7 +11,10 @@
         "home": false,
         "about": false,
         "issues": false,
-        "contribute": false
+        "contribute": false,
+        "sidebar": {
+            "个人博客": "https://www.sohod.cn/"
+        }
     },
 
     "plugins": [

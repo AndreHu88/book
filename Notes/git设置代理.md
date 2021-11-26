@@ -16,6 +16,9 @@
 
 - `git config --global --edit`
 
+## 使用钥匙串凭据
+`git config --global credential.helper osxkeychain`
+
 ## 直接修改代理
 直接修改用户主目录下的 `.gitconfig` 文件
 

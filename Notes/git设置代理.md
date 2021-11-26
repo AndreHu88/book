@@ -26,7 +26,7 @@
 
 以下的1080是电脑的代理端口，请根据实际端口填写
 
-##### socks5代理
+### socks5代理
 ```
 [http]
         proxy = socks5://127.0.0.1:1080
@@ -34,7 +34,7 @@
         proxy = socks5://127.0.0.1:1080
 ```
 
-##### 普通代理
+### 普通代理
 ```
 [http]
     proxy = http://127.0.0.1:1080
@@ -44,7 +44,7 @@
 
 ## 命令设置
 
-##### 设置全局代理
+#### 设置全局代理
 ```
 //http
 git config --global https.proxy http://127.0.0.1:1080
@@ -53,7 +53,7 @@ git config --global https.proxy http://127.0.0.1:1080
 git config --global https.proxy https://127.0.0.1:1080
 ```
 
-##### 设置Socks5代理
+#### 设置Socks5代理
 ```
 //使用socks5代理的 例如ss，ssr 1080是windows下ss的默认代理端口,mac下不同，或者有自定义的，根据自己的改
 git config --global http.proxy socks5://127.0.0.1:1080
@@ -61,7 +61,7 @@ git config --global http.proxy socks5://127.0.0.1:1080
 git config --global https.proxy socks5://127.0.0.1:1080
 ```
 
-##### 只对github.com使用代理，其他仓库不走代理
+### 只对github.com使用代理，其他仓库不走代理
 ```
 git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
 
@@ -75,14 +75,14 @@ git config --global http.https://github.com.proxy http://127.0.0.1:1080
 `[http "https://github.com"]
         proxy = http://127.0.0.1:1080`
 
-#####  取消github代理
+####  取消github代理
 ```
 git config --global --unset http.https://github.com.proxy
 
 git config --global --unset https.https://github.com.proxy
 ```
 
-##### 取消全局代理
+#### 取消全局代理
 ```
 git config --global --unset http.proxy
 

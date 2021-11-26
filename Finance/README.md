@@ -12,6 +12,8 @@
     * [投资最简单的事](Notes/投资最简单的事.md)
 * 财务笔记
     * [财报入门](Accounting/财报入门.md)
+    * [财报被操纵的痕迹](Accounting/财报被操纵的痕迹.md)
+    * [财报被操纵的手法](Accounting/财报被操纵的手法.md)
     * [财报思维导图](Accounting/财报思维导图.md)
     * [ROE-ROA-ROIC](Accounting/ROE-ROA-ROIC.md)
     * [复利](Accounting/复利.md)

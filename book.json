@@ -35,7 +35,8 @@
         "anchor-navigation-ex",
         "code",
         "atoc",
-        "theme-comscore"
+        "theme-comscore",
+        "popup"
     ],
 
     "variables": {

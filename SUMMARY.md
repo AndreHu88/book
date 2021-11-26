@@ -54,3 +54,17 @@
 ## 命令相关
 * [git命令](Command/git命令.md)
 * [gitbook使用](Command/gitbook使用.md)
+
+----
+## 金融相关
+* [简介](Finance/README.md)
+* 大佬书籍
+    * [霍华德马克思](Finance/Notes/霍华德马克思.md)
+    * [斯洛斯](Finance/Notes/斯洛斯/.md)
+    * [黄奇帆](Finance/Notes/黄奇帆/.md)
+    * [查理芒格](Finance/Notes/查理芒格/.md)
+    * [彼得林奇](Finance/Notes/彼得林奇/.md)
+    * [邱国鹭](Finance/Notes/邱国鹭/.md)
+* 财务笔记
+    * [财报入门](Finance/Accounting/财报入门.md)
+    * [财报思维导图](Finance/Accounting/财报思维导图.md)

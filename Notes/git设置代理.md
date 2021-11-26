@@ -12,7 +12,7 @@
 
 编辑配置命令
 
-- `vim ~/.gitconfig` 
+- `sudo vim ~/.gitconfig` 
 
 - `git config --global --edit`
 
@@ -66,7 +66,14 @@ git config --global https.proxy socks5://127.0.0.1:1080
 git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
 
 git config --global https.https://github.com.proxy socks5://127.0.0.1:1080
+
+git config --global http.https://github.com.proxy http://127.0.0.1:1080
 ```
+
+也可以这么写
+
+`[http "https://github.com"]
+        proxy = http://127.0.0.1:1080`
 
 #####  取消github代理
 ```

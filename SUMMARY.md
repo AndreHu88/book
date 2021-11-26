@@ -60,7 +60,7 @@
 * [简介](Finance/README.md)
 * 大佬书籍
     * [霍华德马克思](Finance/Notes/霍华德马克思.md)
-    * [斯洛斯](Finance/Notes/斯洛斯/.md)
+    * [施洛斯](Finance/Notes/施洛斯/.md)
     * [黄奇帆](Finance/Notes/黄奇帆/.md)
     * [查理芒格](Finance/Notes/查理芒格/.md)
     * [彼得林奇](Finance/Notes/彼得林奇/.md)

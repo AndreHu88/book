@@ -68,6 +68,9 @@
     * [投资最简单的事](Finance/Notes/投资最简单的事.md)
 * 财务笔记
     * [财报入门](Finance/Accounting/财报入门.md)
+    * [利润表](Finance/Accounting/利润表.md)
+    * [资产负债表](Finance/Accounting/资产负债表.md)
+    * [现金流量表](Finance/Accounting/现金流量表.md)
     * [财报被操纵的痕迹](Finance/Accounting/财报被操纵的痕迹.md)
     * [财报被操纵的手法](Finance/Accounting/财报被操纵的手法.md)
     * [财报思维导图](Finance/Accounting/财报思维导图.md)

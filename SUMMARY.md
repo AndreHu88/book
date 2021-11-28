@@ -65,7 +65,6 @@
     * [查理芒格](Finance/Notes/查理芒格.md)
     * [彼得林奇](Finance/Notes/彼得林奇.md)
     * [邱国鹭](Finance/Notes/邱国鹭.md)
-    * [投资最简单的事](Finance/Notes/投资最简单的事.md)
 * 财务笔记
     * [财报入门](Finance/Accounting/财报入门.md)
     * [利润表](Finance/Accounting/利润表.md)

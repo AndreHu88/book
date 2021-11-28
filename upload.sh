@@ -1,3 +1,5 @@
+gitbook install
+
 gitbook build ./ docs   
 
 git add --all

@@ -36,7 +36,8 @@
         "code",
         "atoc",
         "theme-comscore",
-        "popup"
+        "popup",
+        "3-ba"
     ],
 
     "variables": {
@@ -114,6 +115,10 @@
             "search-placeholder":"输入关键字搜索", 
             "logo":"./logo.png",
             "favicon": "./favicon.ico"
+        },
+        
+        "3-ba": {
+            "token": "370434a8473e3f2ea2f893934255b77d"
         }
     }
 }

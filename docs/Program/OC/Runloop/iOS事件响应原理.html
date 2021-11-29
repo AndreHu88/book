@@ -1,0 +1,1313 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>iOS事件响应原理 · 个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jack">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="runtime性能优化.html" />
+    
+    
+    <link rel="prev" href="Runloop与线程.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../assets/images/logo.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/images/logo.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/logo.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.sohod.cn/" target="_blank" class="custom-link">个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../Basic/Network/HTTP协议.html">
+            
+                <a href="../../../Basic/Network/HTTP协议.html">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../Basic/Network/HTTPS协议.html">
+            
+                <a href="../../../Basic/Network/HTTPS协议.html">
+            
+                    
+                    HTTPS协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../../Basic/Network/TCP协议.html">
+            
+                <a href="../../../Basic/Network/TCP协议.html">
+            
+                    
+                    TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../../Basic/Network/UDP协议.html">
+            
+                <a href="../../../Basic/Network/UDP协议.html">
+            
+                    
+                    UDP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../../Basic/Network/Socket.html">
+            
+                <a href="../../../Basic/Network/Socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../../Basic/Network/WebSocket.html">
+            
+                <a href="../../../Basic/Network/WebSocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../../Basic/DataStruct/LinkList.html">
+            
+                <a href="../../../Basic/DataStruct/LinkList.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../../Basic/DataStruct/Tree.html">
+            
+                <a href="../../../Basic/DataStruct/Tree.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../../Basic/Algorithm/DP.html">
+            
+                <a href="../../../Basic/Algorithm/DP.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">编程相关</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Objective-C
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../syntax/oc简介.html">
+            
+                <a href="../syntax/oc简介.html">
+            
+                    
+                    Objective-C简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../syntax/import第三方库.html">
+            
+                <a href="../syntax/import第三方库.html">
+            
+                    
+                    import 第三方库头文件总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../syntax/Xcode技巧.html">
+            
+                <a href="../syntax/Xcode技巧.html">
+            
+                    
+                    Xcode技巧和快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../syntax/OC的类和对象.html">
+            
+                <a href="../syntax/OC的类和对象.html">
+            
+                    
+                    OC的类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../syntax/Block总结.html">
+            
+                <a href="../syntax/Block总结.html">
+            
+                    
+                    Block总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../syntax/OC内存管理.html">
+            
+                <a href="../syntax/OC内存管理.html">
+            
+                    
+                    OC内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                    Runtime
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../Runtime/Category实现原理.html">
+            
+                <a href="../Runtime/Category实现原理.html">
+            
+                    
+                    Category的实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="../Runtime/isa指针.html">
+            
+                <a href="../Runtime/isa指针.html">
+            
+                    
+                    isa指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../Runtime/OC方法调用过程.html">
+            
+                <a href="../Runtime/OC方法调用过程.html">
+            
+                    
+                    OC方法调用过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="../Runtime/OC消息机制.html">
+            
+                <a href="../Runtime/OC消息机制.html">
+            
+                    
+                    OC消息机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="../Runtime/runtime如何实现weak属性.html">
+            
+                <a href="../Runtime/runtime如何实现weak属性.html">
+            
+                    
+                    runtime如何实现weak属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.6" data-path="../Runtime/runtime具体应用.html">
+            
+                <a href="../Runtime/runtime具体应用.html">
+            
+                    
+                    runtime具体应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" >
+            
+                <span>
+            
+                    
+                    Runloop
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="触摸事件传递和响应原理.html">
+            
+                <a href="触摸事件传递和响应原理.html">
+            
+                    
+                    触摸事件传递和响应原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="Runloop与线程.html">
+            
+                <a href="Runloop与线程.html">
+            
+                    
+                    Runloop与线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.3.3" data-path="iOS事件响应原理.html">
+            
+                <a href="iOS事件响应原理.html">
+            
+                    
+                    iOS事件响应原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="runtime性能优化.html">
+            
+                <a href="runtime性能优化.html">
+            
+                    
+                    runtime性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../Tool/工欲善其事必先利其器之Xcode.html">
+            
+                <a href="../Tool/工欲善其事必先利其器之Xcode.html">
+            
+                    
+                    工欲善其事必先利其器之Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../Tool/渐变投影阴影的实现.html">
+            
+                <a href="../Tool/渐变投影阴影的实现.html">
+            
+                    
+                    渐变投影阴影的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    Swift
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" >
+            
+                <span>
+            
+                    
+                    语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../../Swift/syntax/swift简介.md">
+            
+                <span>
+            
+                    
+                    swift简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">疑难杂症</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../../Notes/git/git设置代理.html">
+            
+                <a href="../../../Notes/git/git设置代理.html">
+            
+                    
+                    git设置代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../../Notes/git/github打不开打开太慢.html">
+            
+                <a href="../../../Notes/git/github打不开打开太慢.html">
+            
+                    
+                    github打不开打开太慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../../Command/git/git命令.md">
+            
+                <span>
+            
+                    
+                    git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../../Command/git/gitbook使用.md">
+            
+                <span>
+            
+                    
+                    gitbook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">金融相关</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../Finance/">
+            
+                <a href="../../../Finance/">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    大佬书籍
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../../Finance/Notes/霍华德马克思.html">
+            
+                <a href="../../../Finance/Notes/霍华德马克思.html">
+            
+                    
+                    霍华德马克思
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../../Finance/Notes/施洛斯.html">
+            
+                <a href="../../../Finance/Notes/施洛斯.html">
+            
+                    
+                    施洛斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../../Finance/Notes/黄奇帆.html">
+            
+                <a href="../../../Finance/Notes/黄奇帆.html">
+            
+                    
+                    黄奇帆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../../Finance/Notes/查理芒格.html">
+            
+                <a href="../../../Finance/Notes/查理芒格.html">
+            
+                    
+                    查理芒格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../../../Finance/Notes/彼得林奇.html">
+            
+                <a href="../../../Finance/Notes/彼得林奇.html">
+            
+                    
+                    彼得林奇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../../../Finance/Notes/邱国鹭.html">
+            
+                <a href="../../../Finance/Notes/邱国鹭.html">
+            
+                    
+                    邱国鹭
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../../../Finance/Notes/戴维斯.html">
+            
+                <a href="../../../Finance/Notes/戴维斯.html">
+            
+                    
+                    戴维斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8" data-path="../../../Finance/Notes/巴菲特.html">
+            
+                <a href="../../../Finance/Notes/巴菲特.html">
+            
+                    
+                    巴菲特
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.9" data-path="../../../Finance/Notes/格雷厄姆.html">
+            
+                <a href="../../../Finance/Notes/格雷厄姆.html">
+            
+                    
+                    格雷厄姆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    财务笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../../../Finance/Accounting/财报入门.html">
+            
+                <a href="../../../Finance/Accounting/财报入门.html">
+            
+                    
+                    财报入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../../Finance/Accounting/利润表.html">
+            
+                <a href="../../../Finance/Accounting/利润表.html">
+            
+                    
+                    利润表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="../../../Finance/Accounting/资产负债表.html">
+            
+                <a href="../../../Finance/Accounting/资产负债表.html">
+            
+                    
+                    资产负债表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.4" data-path="../../../Finance/Accounting/现金流量表.html">
+            
+                <a href="../../../Finance/Accounting/现金流量表.html">
+            
+                    
+                    现金流量表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.5" data-path="../../../Finance/Accounting/财报被操纵的痕迹.html">
+            
+                <a href="../../../Finance/Accounting/财报被操纵的痕迹.html">
+            
+                    
+                    财报被操纵的痕迹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.6" data-path="../../../Finance/Accounting/财报被操纵的手法.html">
+            
+                <a href="../../../Finance/Accounting/财报被操纵的手法.html">
+            
+                    
+                    财报被操纵的手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.7" data-path="../../../Finance/Accounting/财报思维导图.html">
+            
+                <a href="../../../Finance/Accounting/财报思维导图.html">
+            
+                    
+                    财报思维导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.8" data-path="../../../Finance/Accounting/ROE-ROA-ROIC.html">
+            
+                <a href="../../../Finance/Accounting/ROE-ROA-ROIC.html">
+            
+                    
+                    ROE-ROA-ROIC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.9" data-path="../../../Finance/Accounting/复利.html">
+            
+                <a href="../../../Finance/Accounting/复利.html">
+            
+                    
+                    复利
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <span>
+            
+                    
+                    行业知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="../../../Finance/Industry/地产.html">
+            
+                <a href="../../../Finance/Industry/地产.html">
+            
+                    
+                    地产
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >iOS事件响应原理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#ios&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x539F;&#x7406;"><b></b>iOS&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x539F;&#x7406;</a></li></ul></div><a href="#ios&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x539F;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="ios&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x539F;&#x7406;"><a name="ios&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#ios&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>iOS&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x539F;&#x7406;</h1>
+<script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Runloop与线程.html" class="navigation navigation-prev " aria-label="Previous page: Runloop与线程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="runtime性能优化.html" class="navigation navigation-next " aria-label="Next page: runtime性能优化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"iOS事件响应原理","level":"3.1.3.3","depth":3,"next":{"title":"runtime性能优化","level":"3.1.3.4","depth":3,"path":"Program/OC/Runloop/runtime性能优化.md","ref":"Program/OC/Runloop/runtime性能优化.md","articles":[]},"previous":{"title":"Runloop与线程","level":"3.1.3.2","depth":3,"path":"Program/OC/Runloop/Runloop与线程.md","ref":"Program/OC/Runloop/Runloop与线程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","accordion","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore","popup","3-ba","katex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"accordion":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"popup":{},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./favicon.ico"},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"theme-comscore":{},"3-ba":{"configuration":"auto","token":"370434a8473e3f2ea2f893934255b77d"},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"http://sohod.cn","target":"_blank","name":"风车大战骑士"}]}},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人博客":"https://www.sohod.cn/"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"Program/OC/Runloop/iOS事件响应原理.md","mtime":"2021-11-23T13:31:42.604Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-29T04:34:39.925Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

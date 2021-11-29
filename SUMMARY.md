@@ -42,24 +42,19 @@
         * [工欲善其事必先利其器之Xcode](Program/OC/Tool/工欲善其事必先利其器之Xcode.md)
         * [渐变投影阴影的实现](Program/OC/Tool/渐变投影阴影的实现.md)
         
-
 * Swift
     * 语言基础
         * [swift简介](Program/Swift/syntax/swift简介.md) 
 
-
-
-----
 ## 疑难杂症
-* [git设置代理](Notes/git设置代理.md)
-* [github打不开打开太慢](Notes/github打不开打开太慢.md)
+* git
+    * [git设置代理](Notes/git/git设置代理.md)
+    * [github打不开打开太慢](Notes/git/github打不开打开太慢.md)
+    * [git命令](Command/git/git命令.md)
+    * [gitbook使用](Command/git/gitbook使用.md)
 
-----
-## 命令相关
-* [git命令](Command/git命令.md)
-* [gitbook使用](Command/gitbook使用.md)
 
-----
+
 ## 金融相关
 * [简介](Finance/README.md)
 * 大佬书籍

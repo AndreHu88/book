@@ -1,0 +1,92 @@
+# 工欲善其事必先利其器之Xcode
+
+再开始编程之前， 先把我们的编辑器工具做下自定义的处理，可以大幅提高我们的效率
+
+## 代码仓库
+[代码仓库地址](https://github.com/AndreHu88/XcodeTools)
+
+## 代码块
+
+> Code Snippet是Xcode中的代码块，可以将一些常用的代码添加为Snippet
+
+```
+[_tableView registerClass:[<#name#> class] forCellReuseIdentifier:NSStringFromClass([<#name#> class])];
+
+@property (nonatomic, copy) <#returnType#>(^<#blockName#>)(<#arguments#>);
+```
+
+常用的高频代码等等
+
+Xcode的Snippet 的目录 
+`~/Library/Developer/Xcode/UserData/CodeSnippets` 
+
+将Clone下来的项目中的Code Snippet中的文件拖入 `~/Library/Developer/Xcode/UserData/CodeSnippets`中即可
+
+### FileTemplate文件模板
+可以自定义我们新建文件的模板，使我们的文件可以快速初始化成我们固定的模板
+
+```
+#pragma mark - Life cycle
+- (void)dealloc {
+    NSLog(@"%@ - dealloc", NSStringFromClass([self class]));
+}
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    self.title = @"<#title#>";
+    [self setupSubViews];
+    [self setupViewLayouts];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+     
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+     
+}
+
+- (void)setupSubViews {
+    
+    
+}
+
+- (void)setupViewLayouts {
+    
+    
+}
+
+#pragma mark - Events
+ 
+#pragma mark - UITableViewDataSource
+ 
+#pragma mark - UITableViewDelegate
+ 
+#pragma mark - Public Methods
+ 
+#pragma mark - Private Methods
+
+#pragma mark - Setter 
+
+#pragma mark - Getter
+
+```
+
+ Xcode的代码模板路径
+ 
+ `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File Templates/iOS/Source/Cocoa Touch Class.xctemplate`
+ 
+ 将Clone下来的项目中的FileTemplate中的文件拖入 该目录即可
+ 
+#### OC Extension
+*  Foundation中存放一些Cocoa Foundation中常用的扩展类
+*  UIKit中存放一些Cocoa中常用的扩展类
+ 
+#### Swift Extension
+该目录中存放一些Swift中常用的扩展类
+
+#### Utils
+该目录中存放一些项目中常用的工具类

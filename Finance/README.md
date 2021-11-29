@@ -9,6 +9,9 @@
     * [查理芒格](Notes/查理芒格.md)
     * [彼得林奇](Notes/彼得林奇.md)
     * [邱国鹭](Notes/邱国鹭.md)
+    * [戴维斯](Notes/戴维斯.md)
+    * [巴菲特](Notes/巴菲特.md)
+    * [格雷厄姆](Notes/格雷厄姆.md)
 * 财务笔记
     * [财报入门](Accounting/财报入门.md)
     * [利润表](Accounting/利润表.md)

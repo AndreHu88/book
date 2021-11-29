@@ -37,7 +37,9 @@
         "atoc",
         "theme-comscore",
         "popup",
-        "3-ba"
+        "3-ba",
+        "mathjax",
+        "katex"
     ],
 
     "variables": {

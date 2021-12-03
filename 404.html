@@ -167,14 +167,33 @@
 </head>
 
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
 
-<script language="JavaScript">
+  $(function() {
 
-  function myrefresh(){
-    window.location="/";
-  }
-  
-  setTimeout('myrefresh()',   5000);
+			var wait = $(".second").html();
+      console.log("执行了");
+			timeOut();
+
+			/**
+			 * 实现倒计时
+			 */
+			function timeOut() {
+				if(wait > 0) {
+            setTimeout(function() {
+              $('.second').text(--wait);
+              timeOut();
+            }, 1000);
+				}
+        else{
+          document.referrer === '' ?
+          window.location.href = 'https://www.sohod.cn/book' :
+          window.history.go(-1);
+        }
+			}
+		});
+
  </script>
 <body>
 
@@ -183,7 +202,7 @@
 	  <div class="页面走丢了">
       <h2>页面走丢了...</h2>
       <h4>远方的朋友你好！非常抱歉，您所请求的页面不存在！</h4>
-      <h4>5s后自动返回主页</h4>
+      <h4><span class="second">5</span>s后将自动返回</h4>
 	  </div>	
   </div>
 </body>

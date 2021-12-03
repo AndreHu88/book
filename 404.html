@@ -187,7 +187,9 @@
             }, 1000);
 				}
         else{
-          window.history.length > 1 ? window.history.go(-1) : window.location.href = 'https://www.sohod.cn/book';
+          document.referrer === '' ?
+          window.location.href = 'https://www.sohod.cn/book' :
+          window.history.go(-1);
         }
 			}
 		});
@@ -200,7 +202,7 @@
 	  <div class="页面走丢了">
       <h2>页面走丢了...</h2>
       <h4>远方的朋友你好！非常抱歉，您所请求的页面不存在！</h4>
-      <h4><span class="second">5</span>s后将自动返回</h4>
+      <h4><span class="second">3</span>s后将自动返回</h4>
 	  </div>	
   </div>
 </body>

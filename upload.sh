@@ -1,5 +1,5 @@
 
-gitbook build ./ docs  
+gitbook build 
 
 cp -r _book/* ../book_upload_dir/
 

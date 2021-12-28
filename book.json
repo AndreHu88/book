@@ -24,7 +24,6 @@
         "search-pro",
         "advanced-emoji",
         "include-codeblock",
-        "accordion",
         "-sharing",
         "local-video",
         "simple-page-toc",
@@ -38,7 +37,9 @@
         "theme-comscore",
         "popup",
         "3-ba",
-        "katex"
+        "katex",
+        "sectionx",
+        "donate"
     ],
 
     "variables": {
@@ -116,6 +117,15 @@
             "search-placeholder":"输入关键字搜索", 
             "logo":"./logo.png",
             "favicon": "./favicon.ico"
+        },
+        
+        "donate": {
+          "wechat": "https://s4.ax1x.com/2021/12/08/oRsazq.png",
+          "alipay": "https://s4.ax1x.com/2021/12/08/oRstij.png",
+          "title": "如果喜欢，支持一下",
+          "button": "点我吧",
+          "alipayText": "支付宝",
+          "wechatText": "微信"
         },
         
         "3-ba": {

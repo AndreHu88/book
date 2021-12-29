@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>链表 · 个人笔记</title>
+        <title>firewall防火墙 · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -100,8 +100,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Tree.html" />
+    <link rel="next" href="../../Program/" />
     
+    
+    <link rel="prev" href="iptables.html" />
     
 
     
@@ -287,9 +289,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.2.1" data-path="LinkList.html">
+        <li class="chapter " data-level="2.2.1" data-path="../DataStruct/LinkList.html">
             
-                <a href="LinkList.html">
+                <a href="../DataStruct/LinkList.html">
             
                     
                     链表
@@ -300,9 +302,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2.2" data-path="Tree.html">
+        <li class="chapter " data-level="2.2.2" data-path="../DataStruct/Tree.html">
             
-                <a href="Tree.html">
+                <a href="../DataStruct/Tree.html">
             
                     
                     树
@@ -409,9 +411,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="2.5.1" data-path="../Firewall/iptables.html">
+        <li class="chapter " data-level="2.5.1" data-path="iptables.html">
             
-                <a href="../Firewall/iptables.html">
+                <a href="iptables.html">
             
                     
                     iptables防火墙
@@ -422,9 +424,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5.2" data-path="../Firewall/firewall.html">
+        <li class="chapter active" data-level="2.5.2" data-path="firewall.html">
             
-                <a href="../Firewall/firewall.html">
+                <a href="firewall.html">
             
                     
                     firewall防火墙
@@ -1351,7 +1353,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >链表</a>
+        <a href="../.." >firewall防火墙</a>
     </h1>
 </div>
 
@@ -1369,179 +1371,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x94FE;&#x8868;"><b></b>&#x94FE;&#x8868;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F8B;&#x9898;"><b></b>&#x4F8B;&#x9898;</a></li></ul></ul></div><a href="#&#x94FE;&#x8868;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x94FE;&#x8868;"><a name="&#x94FE;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x94FE;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x94FE;&#x8868;</h1>
-<h2 id="&#x4F8B;&#x9898;"><a name="&#x4F8B;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x4F8B;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F8B;&#x9898;</h2>
-<p>&#x7B97;&#x6CD5;&#x9700;&#x8981;&#x591A;&#x5237;&#x9898;</p>
-<ul>
-<li><a href="https://leetcode.com/" target="_blank">LeetCode</a></li>
-</ul>
-<h4 id="&#x5355;&#x94FE;&#x8868;&#x7FFB;&#x8F6C;-leetcode-206"><a name="&#x5355;&#x94FE;&#x8868;&#x7FFB;&#x8F6C;-leetcode-206" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x94FE;&#x8868;&#x7FFB;&#x8F6C;-leetcode-206"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x94FE;&#x8868;&#x7FFB;&#x8F6C; <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">LeetCode 206</a></h4>
-<p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x548C;&#x975E;&#x9012;&#x5F52;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x89E3;&#x51B3;&#x3002;</p>
-<p>&#x9012;&#x5F52;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function">ListNode* <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode* head)</span>
-</span>{
-    <span class="hljs-keyword">if</span>(<span class="hljs-literal">NULL</span> == head || <span class="hljs-literal">NULL</span> == head-&gt;next)
-        <span class="hljs-keyword">return</span> head;
-    ListNode * p = reverseList(head-&gt;next);
-    head-&gt;next-&gt;next = head;
-    head-&gt;next = <span class="hljs-literal">NULL</span>;
-
-    <span class="hljs-keyword">return</span> p;
-}
-</code></pre>
-<p>&#x975E;&#x9012;&#x5F52;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function">ListNode* <span class="hljs-title">reverseList</span><span class="hljs-params">(ListNode* head)</span> </span>{
-    ListNode *curr = head;
-    <span class="hljs-keyword">if</span> (curr == <span class="hljs-literal">NULL</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
-    }
-
-    ListNode *prev = <span class="hljs-literal">NULL</span>, *temp = <span class="hljs-literal">NULL</span>;
-    <span class="hljs-keyword">while</span> (curr != <span class="hljs-literal">NULL</span>) {
-        temp = curr-&gt;next;
-        curr-&gt;next = prev;
-        prev = curr;
-        curr = temp;
-    }
-
-    <span class="hljs-keyword">return</span> prev;
-}
-</code></pre>
-<h4 id="&#x5355;&#x94FE;&#x8868;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x73AF;-leetcode-141"><a name="&#x5355;&#x94FE;&#x8868;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x73AF;-leetcode-141" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x94FE;&#x8868;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x73AF;-leetcode-141"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x94FE;&#x8868;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x73AF; <a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">LeetCode 141</a></h4>
-<p>&#x6700;&#x5BB9;&#x6613;&#x60F3;&#x5230;&#x7684;&#x601D;&#x8DEF;&#x662F;&#x5B58;&#x4E00;&#x4E2A;&#x6240;&#x6709; Node &#x5730;&#x5740;&#x7684; Hash &#x8868;&#xFF0C;&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x5C06; Node &#x5B58;&#x5230; Hash &#x8868;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;&#x91CD;&#x590D;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x94FE;&#x8868;&#x6709;&#x73AF;&#x3002;</p>
-<p>&#x4E00;&#x4E2A;&#x7ECF;&#x5178;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x53CC;&#x6307;&#x9488;&#xFF08;&#x4E5F;&#x53EB;&#x5FEB;&#x6162;&#x6307;&#x9488;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x904D;&#x5386;&#x94FE;&#x8868;&#xFF0C;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x4E00;&#x6B21;&#x8D70;&#x4E00;&#x6B65;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x4E00;&#x6B21;&#x8D70;&#x4E24;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x94FE;&#x8868;&#x6709;&#x73AF;&#xFF0C;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x5FC5;&#x7136;&#x76F8;&#x9047;&#x3002;</p>
-<p>&#x53CC;&#x6307;&#x9488;&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">hasCycle</span><span class="hljs-params">(ListNode *head)</span> </span>{
-    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-    }
-    ListNode *fast,*slow;
-    slow = head;
-    fast = head-&gt;next;
-    <span class="hljs-keyword">while</span> (fast &amp;&amp; fast-&gt;next) {
-        slow = slow-&gt;next;
-        fast = fast-&gt;next-&gt;next;
-        <span class="hljs-keyword">if</span> (slow == fast) {
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-}
-</code></pre>
-<h4 id="&#x5355;&#x94FE;&#x8868;&#x627E;&#x73AF;&#x5165;&#x53E3;-leetcode-141"><a name="&#x5355;&#x94FE;&#x8868;&#x627E;&#x73AF;&#x5165;&#x53E3;-leetcode-141" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x94FE;&#x8868;&#x627E;&#x73AF;&#x5165;&#x53E3;-leetcode-141"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x94FE;&#x8868;&#x627E;&#x73AF;&#x5165;&#x53E3; <a href="https://leetcode.com/problems/linked-list-cycle-ii/" target="_blank">LeetCode 141</a></h4>
-<p>&#x4F5C;&#x4E3A;&#x4E0A;&#x4E00;&#x9898;&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x4E3A;&#x4E86;&#x627E;&#x5230;&#x73AF;&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5728;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x76F8;&#x9047;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6B64;&#x65F6;&#x6162;&#x6307;&#x9488;&#x6CA1;&#x6709;&#x904D;&#x5386;&#x5B8C;&#x94FE;&#x8868;&#xFF0C;&#x518D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x4ECE;&#x94FE;&#x8868;&#x5934;&#x90E8;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x76F8;&#x9047;&#x7684;&#x70B9;&#xFF0C;&#x5C31;&#x662F;&#x94FE;&#x8868;&#x73AF;&#x7684;&#x5165;&#x53E3;&#x3002;</p>
-<p>&#x7B97;&#x6CD5;&#x5B9E;&#x73B0;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function">ListNode *<span class="hljs-title">detectCycle</span><span class="hljs-params">(ListNode *head)</span> </span>{
-    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">nullptr</span>;
-    }
-    ListNode *fast,*slow;
-    slow = head;
-    fast = head;
-    <span class="hljs-keyword">while</span> (fast &amp;&amp; fast-&gt;next) {
-        slow = slow-&gt;next;
-        fast = fast-&gt;next-&gt;next;
-        <span class="hljs-keyword">if</span> (slow == fast) {
-            ListNode *slow2 = head;
-            <span class="hljs-keyword">while</span> (slow2 != slow) {
-                slow = slow-&gt;next;
-                slow2 = slow2-&gt;next;
-            }
-            <span class="hljs-keyword">return</span> slow2;
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">nullptr</span>;
-}
-</code></pre>
-<h4 id="&#x5355;&#x94FE;&#x8868;&#x627E;&#x4EA4;&#x70B9;-leetcode-160"><a name="&#x5355;&#x94FE;&#x8868;&#x627E;&#x4EA4;&#x70B9;-leetcode-160" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x94FE;&#x8868;&#x627E;&#x4EA4;&#x70B9;-leetcode-160"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x94FE;&#x8868;&#x627E;&#x4EA4;&#x70B9; <a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" target="_blank">LeetCode 160</a></h4>
-<p>&#x548C;&#x627E;&#x73AF;&#x7684;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#xFF0C;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Hash &#x8868;&#x5B58;&#x50A8;&#x6240;&#x6709;&#x8282;&#x70B9;&#xFF0C;&#x53D1;&#x73B0;&#x91CD;&#x590D;&#x7684;&#x8282;&#x70B9;&#x5373;&#x4EA4;&#x70B9;&#x3002;</p>
-<p>&#x4E00;&#x4E2A;&#x5BB9;&#x6613;&#x60F3;&#x5230;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF0C;&#x5148;&#x5F97;&#x5230;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x7136;&#x540E;&#x5F97;&#x5230;&#x957F;&#x5EA6;&#x7684;&#x5DEE;&#x503C; distance&#xFF0C;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x5206;&#x522B;&#x4ECE;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x5934;&#x90E8;&#x904D;&#x5386;&#xFF0C;&#x5176;&#x4E2D;&#x8F83;&#x957F;&#x94FE;&#x8868;&#x6307;&#x9488;&#x5148;&#x8D70; distance &#x6B65;&#xFF0C;&#x7136;&#x540E;&#x540C;&#x65F6;&#x5411;&#x540E;&#x8D70;&#xFF0C;&#x5F53;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x76F8;&#x9047;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5373;&#x94FE;&#x8868;&#x7684;&#x4EA4;&#x70B9;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getListLength</span><span class="hljs-params">(ListNode *head)</span> </span>{
-    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    }
-    <span class="hljs-keyword">int</span> length = <span class="hljs-number">0</span>;
-    ListNode *p = head;
-    <span class="hljs-keyword">while</span> (p!=<span class="hljs-literal">nullptr</span>) {
-        p = p-&gt;next;
-        length ++;
-    }
-    <span class="hljs-keyword">return</span> length;
-}
-
-<span class="hljs-function">ListNode *<span class="hljs-title">getIntersectionNode</span><span class="hljs-params">(ListNode *headA, ListNode *headB)</span> </span>{
-    <span class="hljs-keyword">int</span> lengthA = getListLength(headA);
-    <span class="hljs-keyword">int</span> lengthB = getListLength(headB);
-
-    <span class="hljs-keyword">if</span> (lengthA &gt; lengthB) {
-        <span class="hljs-built_in">std</span>::swap(headA, headB);
-    };
-    <span class="hljs-keyword">int</span> distance = <span class="hljs-built_in">abs</span>(lengthB - lengthA);
-    ListNode *p1 = headA;
-    ListNode *p2 = headB;
-    <span class="hljs-keyword">while</span>(distance--) {
-        p2 = p2-&gt;next;
-    }
-    <span class="hljs-keyword">while</span> (p1 != <span class="hljs-literal">nullptr</span> &amp;&amp; p2 != <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">if</span> (p1 == p2)
-            <span class="hljs-keyword">return</span> p1;
-        p1 = p1-&gt;next;
-        p2 = p2-&gt;next;
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">NULL</span>;
-}
-</code></pre>
-<p>&#x53E6;&#x4E00;&#x4E2A;&#x8F83;&#x5FEB;&#x7684;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4E24;&#x4E2A;&#x6307;&#x9488; pa&#xFF0C;pb &#x5206;&#x522B;&#x4ECE; headA&#xFF0C;headB&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x5F53; pa &#x904D;&#x5386;&#x5230;&#x5C3E;&#x90E8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6307;&#x5411; headB&#xFF0C;&#x5F53; pb &#x904D;&#x5386;&#x5230;&#x5C3E;&#x90E8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8F6C;&#x5411; headA&#x3002;&#x5F53;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x518D;&#x6B21;&#x76F8;&#x9047;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x6709;&#x4EA4;&#x70B9;&#xFF0C;&#x5219;&#x6307;&#x5411;&#x4EA4;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x6307;&#x5411; NULL&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function">ListNode *<span class="hljs-title">getIntersectionNode</span><span class="hljs-params">(ListNode *headA, ListNode *headB)</span> </span>{
-    ListNode *pa = headA;
-    ListNode *pb = headB;
-
-    <span class="hljs-keyword">while</span> (pa != pb) {
-        pa = pa != <span class="hljs-literal">nullptr</span> ? pa-&gt;next : headB;
-        pb = pb != <span class="hljs-literal">nullptr</span> ? pb-&gt;next : headA;
-    }
-
-    <span class="hljs-keyword">return</span> pa;
-}
-</code></pre>
-<h4 id="&#x5355;&#x94FE;&#x8868;&#x627E;&#x4E2D;&#x95F4;&#x8282;&#x70B9;-leetcode-876"><a name="&#x5355;&#x94FE;&#x8868;&#x627E;&#x4E2D;&#x95F4;&#x8282;&#x70B9;-leetcode-876" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x94FE;&#x8868;&#x627E;&#x4E2D;&#x95F4;&#x8282;&#x70B9;-leetcode-876"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x94FE;&#x8868;&#x627E;&#x4E2D;&#x95F4;&#x8282;&#x70B9; <a href="https://leetcode.com/problems/middle-of-the-linked-list/" target="_blank">LeetCode 876</a></h4>
-<p>&#x7528;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x6CD5;&#xFF0C;&#x5F53;&#x5FEB;&#x6307;&#x9488;&#x8D70;&#x5230;&#x94FE;&#x8868;&#x7ED3;&#x5C3E;&#x65F6;&#xFF0C;&#x6162;&#x6307;&#x9488;&#x521A;&#x597D;&#x8D70;&#x5230;&#x94FE;&#x8868;&#x7684;&#x4E2D;&#x95F4;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function">ListNode* <span class="hljs-title">middleNode</span><span class="hljs-params">(ListNode* head)</span> </span>{
-    ListNode *slow = head;
-    ListNode *fast = head;
-    <span class="hljs-keyword">while</span> (fast &amp;&amp; fast-&gt;next) {
-        slow = slow-&gt;next;
-        fast = fast-&gt;next-&gt;next;
-    }
-
-    <span class="hljs-keyword">return</span> slow;
-}
-</code></pre>
-<h4 id="&#x5355;&#x94FE;&#x8868;&#x5408;&#x5E76;-leetcode-21"><a name="&#x5355;&#x94FE;&#x8868;&#x5408;&#x5E76;-leetcode-21" class="anchor-navigation-ex-anchor" href="#&#x5355;&#x94FE;&#x8868;&#x5408;&#x5E76;-leetcode-21"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x94FE;&#x8868;&#x5408;&#x5E76; <a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">LeetCode 21</a></h4>
-<p>&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x672C;&#x8EAB;&#x90FD;&#x662F;&#x6392;&#x5E8F;&#x8FC7;&#x7684;&#xFF0C;&#x628A;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x4ECE;&#x5934;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;&#x9010;&#x4E2A;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x6700;&#x540E;&#x5269;&#x4E0B;&#x7684;&#x8282;&#x70B9;&#x63A5;&#x5230;&#x5C3E;&#x90E8;&#xFF1A;</p>
-<pre><code class="lang-cpp"><span class="hljs-function">ListNode *<span class="hljs-title">mergeTwoLists</span><span class="hljs-params">(ListNode *l1, ListNode *l2)</span> </span>{
-    <span class="hljs-keyword">if</span> (l1 == <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">return</span> l2;
-    }
-    <span class="hljs-keyword">if</span> (l2 == <span class="hljs-literal">nullptr</span>) {
-        <span class="hljs-keyword">return</span> l1;
-    }
-    <span class="hljs-function">ListNode <span class="hljs-title">dummy</span><span class="hljs-params">(<span class="hljs-number">-1</span>)</span></span>;
-    ListNode *p = &amp;dummy;
-    <span class="hljs-keyword">for</span> (; l1 &amp;&amp; l2; p = p-&gt;next) {
-        <span class="hljs-keyword">if</span> (l1-&gt;val &lt; l2-&gt;val) {
-            p-&gt;next = l1;
-            l1 = l1-&gt;next;
-        } <span class="hljs-keyword">else</span> {
-            p-&gt;next = l2;
-            l2 = l2-&gt;next;
-        }
-    }
-    p-&gt;next = l1 != <span class="hljs-literal">nullptr</span> ? l1 : l2;
-    <span class="hljs-keyword">return</span> dummy.next;
-}
-</code></pre>
-<script type="text/javascript">var className='atoc';</script>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#firewall&#x9632;&#x706B;&#x5899;"><b></b>firewall&#x9632;&#x706B;&#x5899;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x67E5;&#x770B;firewall&#x670D;&#x52A1;&#x72B6;&#x6001;"><b></b>1&#x3001;&#x67E5;&#x770B;firewall&#x670D;&#x52A1;&#x72B6;&#x6001;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;"><b></b>2&#x3001;&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;</a></li><li><span class="title-icon "></span><a href="#3&#x3001;&#x5F00;&#x542F;&#x3001;&#x91CD;&#x542F;&#x3001;&#x5173;&#x95ED;&#x3001;firewalldservice&#x670D;&#x52A1;"><b></b>3&#x3001;&#x5F00;&#x542F;&#x3001;&#x91CD;&#x542F;&#x3001;&#x5173;&#x95ED;&#x3001;firewalld.service&#x670D;&#x52A1;</a></li><li><span class="title-icon "></span><a href="#4&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;"><b></b>4&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;</a></li><li><span class="title-icon "></span><a href="#5&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x5F00;&#x653E;&#x3001;&#x5173;&#x95ED;&#x7AEF;&#x53E3;"><b></b>5&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x5F00;&#x653E;&#x3001;&#x5173;&#x95ED;&#x7AEF;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x6570;&#x89E3;&#x91CA;"><b></b>&#x53C2;&#x6570;&#x89E3;&#x91CA;</a></li></ul></ul></ul></div><a href="#firewall&#x9632;&#x706B;&#x5899;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="firewall&#x9632;&#x706B;&#x5899;"><a name="firewall&#x9632;&#x706B;&#x5899;" class="anchor-navigation-ex-anchor" href="#firewall&#x9632;&#x706B;&#x5899;"><i class="fa fa-link" aria-hidden="true"></i></a>firewall&#x9632;&#x706B;&#x5899;</h1>
+<h3 id="1&#x3001;&#x67E5;&#x770B;firewall&#x670D;&#x52A1;&#x72B6;&#x6001;"><a name="1&#x3001;&#x67E5;&#x770B;firewall&#x670D;&#x52A1;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x67E5;&#x770B;firewall&#x670D;&#x52A1;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x67E5;&#x770B;firewall&#x670D;&#x52A1;&#x72B6;&#x6001;</h3>
+<pre><code>systemctl status firewalld
+&#x51FA;&#x73B0;Active: active (running)&#x5207;&#x9AD8;&#x4EAE;&#x663E;&#x793A;&#x5219;&#x8868;&#x793A;&#x662F;&#x542F;&#x52A8;&#x72B6;&#x6001;&#x3002;
+&#x51FA;&#x73B0; Active: inactive (dead)&#x7070;&#x8272;&#x8868;&#x793A;&#x505C;&#x6B62;&#xFF0C;&#x770B;&#x5355;&#x8BCD;&#x4E5F;&#x884C;&#x3002;
+</code></pre><h3 id="2&#x3001;&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;"><a name="2&#x3001;&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x67E5;&#x770B;firewall&#x7684;&#x72B6;&#x6001;</h3>
+<pre><code>firewall-cmd --state
+</code></pre><h3 id="3&#x3001;&#x5F00;&#x542F;&#x3001;&#x91CD;&#x542F;&#x3001;&#x5173;&#x95ED;&#x3001;firewalldservice&#x670D;&#x52A1;"><a name="3&#x3001;&#x5F00;&#x542F;&#x3001;&#x91CD;&#x542F;&#x3001;&#x5173;&#x95ED;&#x3001;firewalldservice&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x5F00;&#x542F;&#x3001;&#x91CD;&#x542F;&#x3001;&#x5173;&#x95ED;&#x3001;firewalldservice&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x5F00;&#x542F;&#x3001;&#x91CD;&#x542F;&#x3001;&#x5173;&#x95ED;&#x3001;firewalld.service&#x670D;&#x52A1;</h3>
+<pre><code>#&#x5F00;&#x542F;
+service firewalld start
+#&#x91CD;&#x542F;
+service firewalld restart
+#&#x5173;&#x95ED;
+service firewalld stop
+</code></pre><h3 id="4&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;"><a name="4&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#4&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;</h3>
+<pre><code>firewall-cmd --list-all
+</code></pre><h3 id="5&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x5F00;&#x653E;&#x3001;&#x5173;&#x95ED;&#x7AEF;&#x53E3;"><a name="5&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x5F00;&#x653E;&#x3001;&#x5173;&#x95ED;&#x7AEF;&#x53E3;" class="anchor-navigation-ex-anchor" href="#5&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x5F00;&#x653E;&#x3001;&#x5173;&#x95ED;&#x7AEF;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>5&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x5F00;&#x653E;&#x3001;&#x5173;&#x95ED;&#x7AEF;&#x53E3;</h3>
+<pre><code>#&#x67E5;&#x8BE2;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x653E;
+firewall-cmd --query-port=8080/tcp
+#&#x5F00;&#x653E;80&#x7AEF;&#x53E3;
+firewall-cmd --permanent --add-port=80/tcp
+#&#x79FB;&#x9664;&#x7AEF;&#x53E3;
+firewall-cmd --permanent --remove-port=8080/tcp
+#&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;(&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x540E;&#x8981;&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;)
+firewall-cmd --reload
+</code></pre><h3 id="&#x53C2;&#x6570;&#x89E3;&#x91CA;"><a name="&#x53C2;&#x6570;&#x89E3;&#x91CA;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x89E3;&#x91CA;</h3>
+<pre><code>1&#x3001;firwall-cmd&#xFF1A;&#x662F;Linux&#x63D0;&#x4F9B;&#x7684;&#x64CD;&#x4F5C;firewall&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF1B;
+2&#x3001;--permanent&#xFF1A;&#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x4E3A;&#x6301;&#x4E45;&#xFF1B;
+3&#x3001;--add-port&#xFF1A;&#x6807;&#x8BC6;&#x6DFB;&#x52A0;&#x7684;&#x7AEF;&#x53E3;
+</code></pre><script type="text/javascript">var className='atoc';</script>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -1585,8 +1444,12 @@
 
             
                 
+                <a href="iptables.html" class="navigation navigation-prev " aria-label="Previous page: iptables防火墙">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="Tree.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 树">
+                
+                <a href="../../Program/" class="navigation navigation-next " aria-label="Next page: iOS相关">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1597,7 +1460,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"链表","level":"2.2.1","depth":2,"next":{"title":"树","level":"2.2.2","depth":2,"path":"Basic/DataStruct/Tree.md","ref":"Basic/DataStruct/Tree.md","articles":[]},"previous":{"title":"数据结构","level":"2.2","depth":1,"ref":"","articles":[{"title":"链表","level":"2.2.1","depth":2,"path":"Basic/DataStruct/LinkList.md","ref":"Basic/DataStruct/LinkList.md","articles":[]},{"title":"树","level":"2.2.2","depth":2,"path":"Basic/DataStruct/Tree.md","ref":"Basic/DataStruct/Tree.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore","popup","3-ba","katex","sectionx","donate"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"popup":{},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./favicon.ico"},"code":{"copyButtons":true},"donate":{"alipay":"https://s4.ax1x.com/2021/12/08/oRstij.png","alipayText":"支付宝","button":"点我吧","title":"如果喜欢，支持一下","wechat":"https://s4.ax1x.com/2021/12/08/oRsazq.png","wechatText":"微信"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"theme-comscore":{},"3-ba":{"configuration":"auto","token":"370434a8473e3f2ea2f893934255b77d"},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"http://sohod.cn","target":"_blank","name":"风车大战骑士"}]}},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人博客":"https://www.sohod.cn/"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"Basic/DataStruct/LinkList.md","mtime":"2021-11-25T08:42:12.270Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T07:14:43.525Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"firewall防火墙","level":"2.5.2","depth":2,"next":{"title":"iOS相关","level":"3.1","depth":1,"path":"Program/README.md","ref":"Program/README.md","articles":[{"title":"Objective-C","level":"3.1.1","depth":2,"ref":"","articles":[{"title":"Objective-C简介","level":"3.1.1.1","depth":3,"path":"Program/iOS/OC/oc简介.md","ref":"Program/iOS/OC/oc简介.md","articles":[]},{"title":"import 第三方库头文件总结","level":"3.1.1.2","depth":3,"path":"Program/iOS/OC/import第三方库.md","ref":"Program/iOS/OC/import第三方库.md","articles":[]},{"title":"Xcode技巧和快捷键","level":"3.1.1.3","depth":3,"path":"Program/iOS/OC/Xcode技巧.md","ref":"Program/iOS/OC/Xcode技巧.md","articles":[]},{"title":"OC的类和对象","level":"3.1.1.4","depth":3,"path":"Program/iOS/OC/OC的类和对象.md","ref":"Program/iOS/OC/OC的类和对象.md","articles":[]},{"title":"Block总结","level":"3.1.1.5","depth":3,"path":"Program/iOS/OC/Block总结.md","ref":"Program/iOS/OC/Block总结.md","articles":[]},{"title":"OC内存管理","level":"3.1.1.6","depth":3,"path":"Program/iOS/OC/OC内存管理.md","ref":"Program/iOS/OC/OC内存管理.md","articles":[]},{"title":"Category的实现原理","level":"3.1.1.7","depth":3,"path":"Program/iOS/OC/Category实现原理.md","ref":"Program/iOS/OC/Category实现原理.md","articles":[]},{"title":"isa指针","level":"3.1.1.8","depth":3,"path":"Program/iOS/OC/isa指针.md","ref":"Program/iOS/OC/isa指针.md","articles":[]},{"title":"OC方法调用过程","level":"3.1.1.9","depth":3,"path":"Program/iOS/OC/OC方法调用过程.md","ref":"Program/iOS/OC/OC方法调用过程.md","articles":[]},{"title":"OC消息机制","level":"3.1.1.10","depth":3,"path":"Program/iOS/OC/OC消息机制.md","ref":"Program/iOS/OC/OC消息机制.md","articles":[]},{"title":"runtime如何实现weak属性","level":"3.1.1.11","depth":3,"path":"Program/iOS/OC/runtime如何实现weak属性.md","ref":"Program/iOS/OC/runtime如何实现weak属性.md","articles":[]},{"title":"runtime具体应用","level":"3.1.1.12","depth":3,"path":"Program/iOS/OC/runtime具体应用.md","ref":"Program/iOS/OC/runtime具体应用.md","articles":[]},{"title":"runtime性能优化","level":"3.1.1.13","depth":3,"path":"Program/iOS/OC/runtime性能优化.md","ref":"Program/iOS/OC/runtime性能优化.md","articles":[]},{"title":"触摸事件传递和响应原理","level":"3.1.1.14","depth":3,"path":"Program/iOS/OC/触摸事件传递和响应原理.md","ref":"Program/iOS/OC/触摸事件传递和响应原理.md","articles":[]},{"title":"Runloop与线程","level":"3.1.1.15","depth":3,"path":"Program/iOS/OC/Runloop与线程.md","ref":"Program/iOS/OC/Runloop与线程.md","articles":[]},{"title":"iOS事件响应原理","level":"3.1.1.16","depth":3,"path":"Program/iOS/OC/iOS事件响应原理.md","ref":"Program/iOS/OC/iOS事件响应原理.md","articles":[]}]},{"title":"Swift","level":"3.1.2","depth":2,"ref":"","articles":[{"title":"swift简介","level":"3.1.2.1","depth":3,"path":"Program/iOS/Swift/syntax/swift简介.md","ref":"Program/iOS/Swift/syntax/swift简介.md","articles":[]}]},{"title":"工具","level":"3.1.3","depth":2,"ref":"","articles":[{"title":"工欲善其事必先利其器之Xcode","level":"3.1.3.1","depth":3,"path":"Program/iOS/Tool/工欲善其事必先利其器之Xcode.md","ref":"Program/iOS/Tool/工欲善其事必先利其器之Xcode.md","articles":[]},{"title":"渐变投影阴影的实现","level":"3.1.3.2","depth":3,"path":"Program/iOS/Tool/渐变投影阴影的实现.md","ref":"Program/iOS/Tool/渐变投影阴影的实现.md","articles":[]},{"title":"Xcode获取打包时间脚本","level":"3.1.3.3","depth":3,"path":"Program/iOS/Tool/Xcode获取打包时间脚本.md","ref":"Program/iOS/Tool/Xcode获取打包时间脚本.md","articles":[]},{"title":"Xcode脚本打包","level":"3.1.3.4","depth":3,"path":"Program/iOS/Tool/Xcode脚本打包.md","ref":"Program/iOS/Tool/Xcode脚本打包.md","articles":[]}]},{"title":"其它","level":"3.1.4","depth":2,"ref":"","articles":[{"title":"iOS输入框一些问题","level":"3.1.4.1","depth":3,"path":"Program/iOS/Others/iOS输入框一些问题.md","ref":"Program/iOS/Others/iOS输入框一些问题.md","articles":[]},{"title":"iOS文件及持久化","level":"3.1.4.2","depth":3,"path":"Program/iOS/Others/iOS文件及持久化.md","ref":"Program/iOS/Others/iOS文件及持久化.md","articles":[]},{"title":"cell事件和didSelect冲突","level":"3.1.4.3","depth":3,"path":"Program/iOS/Others/cell事件和didSelect冲突.md","ref":"Program/iOS/Others/cell事件和didSelect冲突.md","articles":[]}]}]},"previous":{"title":"iptables防火墙","level":"2.5.1","depth":2,"path":"Basic/Firewall/iptables.md","ref":"Basic/Firewall/iptables.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore","popup","3-ba","katex","sectionx","donate"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"popup":{},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./favicon.ico"},"code":{"copyButtons":true},"donate":{"alipay":"https://s4.ax1x.com/2021/12/08/oRstij.png","alipayText":"支付宝","button":"点我吧","title":"如果喜欢，支持一下","wechat":"https://s4.ax1x.com/2021/12/08/oRsazq.png","wechatText":"微信"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"theme-comscore":{},"3-ba":{"configuration":"auto","token":"370434a8473e3f2ea2f893934255b77d"},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"http://sohod.cn","target":"_blank","name":"风车大战骑士"}]}},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人博客":"https://www.sohod.cn/"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"Basic/Firewall/firewall.md","mtime":"2021-12-29T07:14:28.851Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-29T07:14:43.525Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -18,9 +18,9 @@
 * MySQL
     * [MySQL基本](Basic/MySQL/MySQL基本.md)
     * [MySQL多表查询](Basic/MySQL/MySQL多表查询.md)
-* Firewall
-    * [iptables防火墙](Basic/Firewall/iptables.md)
-    * [firewall防火墙](Basic/Firewall/firewall.md)
+* Linux
+    * [iptables防火墙](Basic/Linux/iptables.md)
+    * [firewall防火墙](Basic/Linux/firewall.md)
 
 ----
 ##  编程相关 

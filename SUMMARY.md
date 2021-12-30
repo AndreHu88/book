@@ -34,7 +34,7 @@
         * [Block总结](Program/iOS/OC/Block总结.md) 
         * [OC内存管理](Program/iOS/OC/OC内存管理.md) 
         * [Category的实现原理](Program/iOS/OC/Category实现原理.md)
-        * [isa指针](Program/iOS/OC/isa和Class.md)
+        * [isa和Class](Program/iOS/OC/isa和Class.md)
         * [OC方法调用过程](Program/iOS/OC/OC方法调用过程.md)
         * [OC消息机制](Program/iOS/OC/OC消息机制.md)
         * [runtime如何实现weak属性](Program/iOS/OC/runtime如何实现weak属性.md)
@@ -79,6 +79,7 @@
     * [格雷厄姆](Finance/Notes/格雷厄姆.md)
     * [曼昆](Finance/Notes/曼昆.md)
     * [货币社融和信贷](Finance/Notes/货币社融和信贷.md)
+    * [投资有规律](Finance/Notes/投资有规律.md)
 * 财务笔记
     * [A股财报披露知识](Finance/Accounting/A股财报披露知识.md)
     * [财报入门](Finance/Accounting/财报入门.md)

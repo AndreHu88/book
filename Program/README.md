@@ -18,7 +18,7 @@
 
 ### Runtime的总结
 * [Category的实现原理](Program/iOS/OC/Category实现原理.md)
-* [isa指针](Program/iOS/OC/isa和Class.md)
+* [isa和Class](Program/iOS/OC/isa和Class.md)
 * [OC方法调用过程](Program/iOS/OC/OC方法调用过程.md)
 * [OC消息机制](Program/iOS/OC/OC消息机制.md)
 * [runtime如何实现weak属性](Program/iOS/OC/runtime如何实现weak属性.md)

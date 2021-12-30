@@ -14,6 +14,7 @@
     * [格雷厄姆](Notes/格雷厄姆.md)
     * [曼昆](Notes/曼昆.md)
     * [货币社融和信贷](Notes/货币社融和信贷.md)
+    * [投资有规律](Notes/投资有规律.md)
 * 财务笔记
     * [A股财报披露知识](Accounting/A股财报披露知识.md)
     * [财报入门](Accounting/财报入门.md)

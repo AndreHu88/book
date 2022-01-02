@@ -1,3 +1,5 @@
+### 简介
+
 大家好， 这是我的个人博客
 
 人生如戏， 岁月一点一滴的溜走
@@ -8,7 +10,7 @@
 
 闻道有先后，术业有专攻，如是而已
 
-主要涉及的领域： [计算机相关](https://www.sohod.cn/book/Program/) 和  [金融证券投资](Finance/README.md/) 
+主要涉及的领域： [计算机相关领域](https://www.sohod.cn/book/Program/) 和  [金融证券投资](Finance/README.md/) 
 
 ---
 

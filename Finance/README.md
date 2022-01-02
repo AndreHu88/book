@@ -30,3 +30,5 @@
     * [重资产和轻资产](Accounting/重资产和轻资产.md)
 * 行业知识
     * [地产](Industry/地产.md)
+    * [银行](Industry/bank.md)
+    * [保险](Industry/insurance.md)

@@ -101,5 +101,6 @@
 * 行业知识
     * [地产](Finance/Industry/地产.md)
     * [银行](Finance/Industry/bank.md)
+    * [保险](Finance/Industry/insurance.md)
 
 

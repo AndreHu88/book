@@ -1,0 +1,1899 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>iOS基础动画 · 个人笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Jack">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Cordova总结.html" />
+    
+    
+    <link rel="prev" href="FMDB总结.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../assets/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../assets/images/logo.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../assets/images/logo.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logo.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.sohod.cn/" target="_blank" class="custom-link">个人博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    网络
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../basic/Network/HTTP协议.html">
+            
+                <a href="../../basic/Network/HTTP协议.html">
+            
+                    
+                    HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../basic/Network/HTTPS协议.html">
+            
+                <a href="../../basic/Network/HTTPS协议.html">
+            
+                    
+                    HTTPS协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../basic/Network/TCP协议.html">
+            
+                <a href="../../basic/Network/TCP协议.html">
+            
+                    
+                    TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../basic/Network/UDP协议.html">
+            
+                <a href="../../basic/Network/UDP协议.html">
+            
+                    
+                    UDP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../basic/Network/Socket.html">
+            
+                <a href="../../basic/Network/Socket.html">
+            
+                    
+                    Socket
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../basic/Network/WebSocket.html">
+            
+                <a href="../../basic/Network/WebSocket.html">
+            
+                    
+                    WebSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../basic/DataStruct/LinkList.html">
+            
+                <a href="../../basic/DataStruct/LinkList.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../basic/DataStruct/Tree.html">
+            
+                <a href="../../basic/DataStruct/Tree.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../basic/Algorithm/DP.html">
+            
+                <a href="../../basic/Algorithm/DP.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    MySQL
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../basic/MySQL/MySQL基本.html">
+            
+                <a href="../../basic/MySQL/MySQL基本.html">
+            
+                    
+                    MySQL基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../basic/MySQL/MySQL多表查询.html">
+            
+                <a href="../../basic/MySQL/MySQL多表查询.html">
+            
+                    
+                    MySQL多表查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    命令类
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../basic/Command/commonUse.html">
+            
+                <a href="../../basic/Command/commonUse.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../basic/Command/iptables.html">
+            
+                <a href="../../basic/Command/iptables.html">
+            
+                    
+                    iptables防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../../basic/Command/firewall.html">
+            
+                <a href="../../basic/Command/firewall.html">
+            
+                    
+                    firewall防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="../../basic/Command/MacApache.html">
+            
+                <a href="../../basic/Command/MacApache.html">
+            
+                    
+                    Mac Apache操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="../../basic/Command/MacNginx.html">
+            
+                <a href="../../basic/Command/MacNginx.html">
+            
+                    
+                    Mac Nginx操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="../../basic/Command/mysql.html">
+            
+                <a href="../../basic/Command/mysql.html">
+            
+                    
+                    mysql常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="../../basic/Command/shell解析描述文件.html">
+            
+                <a href="../../basic/Command/shell解析描述文件.html">
+            
+                    
+                    shell解析描述文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">编程相关</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    iOS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="website.html">
+            
+                <a href="website.html">
+            
+                    
+                    常用网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="oc简介.html">
+            
+                <a href="oc简介.html">
+            
+                    
+                    Objective-C简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="import第三方库.html">
+            
+                <a href="import第三方库.html">
+            
+                    
+                    import 第三方库头文件总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="OC的类和对象.html">
+            
+                <a href="OC的类和对象.html">
+            
+                    
+                    OC的类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="Block总结.html">
+            
+                <a href="Block总结.html">
+            
+                    
+                    Block总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="OC内存管理.html">
+            
+                <a href="OC内存管理.html">
+            
+                    
+                    OC内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="iOS输入框一些问题.html">
+            
+                <a href="iOS输入框一些问题.html">
+            
+                    
+                    iOS输入框一些问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="iOS文件及持久化.html">
+            
+                <a href="iOS文件及持久化.html">
+            
+                    
+                    iOS文件及持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="cell事件和didSelect冲突.html">
+            
+                <a href="cell事件和didSelect冲突.html">
+            
+                    
+                    cell事件和didSelect冲突
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="Category和Extension.html">
+            
+                <a href="Category和Extension.html">
+            
+                    
+                    Category和Extension
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="isa和Class.html">
+            
+                <a href="isa和Class.html">
+            
+                    
+                    isa和Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12" data-path="OC方法调用过程.html">
+            
+                <a href="OC方法调用过程.html">
+            
+                    
+                    OC方法调用过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13" data-path="OC消息机制.html">
+            
+                <a href="OC消息机制.html">
+            
+                    
+                    OC消息机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.14" data-path="runtime如何实现weak属性.html">
+            
+                <a href="runtime如何实现weak属性.html">
+            
+                    
+                    runtime如何实现weak属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15" data-path="runtime具体应用.html">
+            
+                <a href="runtime具体应用.html">
+            
+                    
+                    runtime具体应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.16" data-path="runtime性能优化.html">
+            
+                <a href="runtime性能优化.html">
+            
+                    
+                    runtime性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.17" data-path="触摸事件传递和响应原理.html">
+            
+                <a href="触摸事件传递和响应原理.html">
+            
+                    
+                    触摸事件传递和响应原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.18" data-path="Runloop与线程.html">
+            
+                <a href="Runloop与线程.html">
+            
+                    
+                    Runloop与线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.19" data-path="iOS事件响应原理.html">
+            
+                <a href="iOS事件响应原理.html">
+            
+                    
+                    iOS事件响应原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.20" data-path="FMDB总结.html">
+            
+                <a href="FMDB总结.html">
+            
+                    
+                    FMDB总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.21" data-path="iOS基础动画.html">
+            
+                <a href="iOS基础动画.html">
+            
+                    
+                    iOS基础动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.22" data-path="Cordova总结.html">
+            
+                <a href="Cordova总结.html">
+            
+                    
+                    Cordova总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.23" data-path="protobuf.html">
+            
+                <a href="protobuf.html">
+            
+                    
+                    protobuf总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.24" data-path="ics文件解析.html">
+            
+                <a href="ics文件解析.html">
+            
+                    
+                    ics文件解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../tool/工欲善其事必先利其器之Xcode.html">
+            
+                <a href="../tool/工欲善其事必先利其器之Xcode.html">
+            
+                    
+                    工欲善其事必先利其器之Xcode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../tool/Xcode技巧.html">
+            
+                <a href="../tool/Xcode技巧.html">
+            
+                    
+                    Xcode技巧和快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../tool/渐变投影阴影的实现.html">
+            
+                <a href="../tool/渐变投影阴影的实现.html">
+            
+                    
+                    渐变投影阴影的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../tool/Xcode脚本打包.html">
+            
+                <a href="../tool/Xcode脚本打包.html">
+            
+                    
+                    Xcode脚本打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../tool/Xcode获取打包时间脚本.html">
+            
+                <a href="../tool/Xcode获取打包时间脚本.html">
+            
+                    
+                    Xcode获取打包时间脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../tool/icon.html">
+            
+                <a href="../tool/icon.html">
+            
+                    
+                    iOS icon生成脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../tool/wireshark抓包.html">
+            
+                <a href="../tool/wireshark抓包.html">
+            
+                    
+                    wireshark抓包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    其它
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../others/VueInit.html">
+            
+                <a href="../../others/VueInit.html">
+            
+                    
+                    Vue初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../../others/vue3.html">
+            
+                <a href="../../others/vue3.html">
+            
+                    
+                    Vue3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">疑难杂症</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../notes/git/git设置代理.html">
+            
+                <a href="../../notes/git/git设置代理.html">
+            
+                    
+                    git设置代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../notes/git/github打不开打开太慢.html">
+            
+                <a href="../../notes/git/github打不开打开太慢.html">
+            
+                    
+                    github打不开打开太慢
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../notes/git/git命令.html">
+            
+                <a href="../../notes/git/git命令.html">
+            
+                    
+                    git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../notes/git/gitbook使用.html">
+            
+                <a href="../../notes/git/gitbook使用.html">
+            
+                    
+                    gitbook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">金融相关</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../finance/">
+            
+                <a href="../../finance/">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <span>
+            
+                    
+                    投资知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../finance/notes/霍华德马克思.html">
+            
+                <a href="../../finance/notes/霍华德马克思.html">
+            
+                    
+                    霍华德马克思
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../finance/notes/施洛斯.html">
+            
+                <a href="../../finance/notes/施洛斯.html">
+            
+                    
+                    施洛斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../finance/notes/黄奇帆.html">
+            
+                <a href="../../finance/notes/黄奇帆.html">
+            
+                    
+                    黄奇帆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../finance/notes/查理芒格.html">
+            
+                <a href="../../finance/notes/查理芒格.html">
+            
+                    
+                    查理芒格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../../finance/notes/彼得林奇.html">
+            
+                <a href="../../finance/notes/彼得林奇.html">
+            
+                    
+                    彼得林奇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../../finance/notes/邱国鹭.html">
+            
+                <a href="../../finance/notes/邱国鹭.html">
+            
+                    
+                    邱国鹭
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../../finance/notes/戴维斯.html">
+            
+                <a href="../../finance/notes/戴维斯.html">
+            
+                    
+                    戴维斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8" data-path="../../finance/notes/巴菲特.html">
+            
+                <a href="../../finance/notes/巴菲特.html">
+            
+                    
+                    巴菲特
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.9" data-path="../../finance/notes/格雷厄姆.html">
+            
+                <a href="../../finance/notes/格雷厄姆.html">
+            
+                    
+                    格雷厄姆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.10" data-path="../../finance/notes/曼昆.html">
+            
+                <a href="../../finance/notes/曼昆.html">
+            
+                    
+                    曼昆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.11" data-path="../../finance/notes/货币社融和信贷.html">
+            
+                <a href="../../finance/notes/货币社融和信贷.html">
+            
+                    
+                    货币社融和信贷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.12" data-path="../../finance/notes/投资有规律.html">
+            
+                <a href="../../finance/notes/投资有规律.html">
+            
+                    
+                    投资有规律
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    财务知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../../finance/Accounting/A股财报披露知识.html">
+            
+                <a href="../../finance/Accounting/A股财报披露知识.html">
+            
+                    
+                    A股财报披露知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../../finance/Accounting/财报入门.html">
+            
+                <a href="../../finance/Accounting/财报入门.html">
+            
+                    
+                    财报入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="../../finance/Accounting/财报思维导图.html">
+            
+                <a href="../../finance/Accounting/财报思维导图.html">
+            
+                    
+                    财报思维导图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.4" data-path="../../finance/Accounting/利润表.html">
+            
+                <a href="../../finance/Accounting/利润表.html">
+            
+                    
+                    利润表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.5" data-path="../../finance/Accounting/资产负债表.html">
+            
+                <a href="../../finance/Accounting/资产负债表.html">
+            
+                    
+                    资产负债表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.6" data-path="../../finance/Accounting/现金流量表.html">
+            
+                <a href="../../finance/Accounting/现金流量表.html">
+            
+                    
+                    现金流量表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.7" data-path="../../finance/Accounting/财报被操纵的痕迹.html">
+            
+                <a href="../../finance/Accounting/财报被操纵的痕迹.html">
+            
+                    
+                    财报被操纵的痕迹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.8" data-path="../../finance/Accounting/财报被操纵的手法.html">
+            
+                <a href="../../finance/Accounting/财报被操纵的手法.html">
+            
+                    
+                    财报被操纵的手法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.9" data-path="../../finance/Accounting/ROE-ROA-ROIC.html">
+            
+                <a href="../../finance/Accounting/ROE-ROA-ROIC.html">
+            
+                    
+                    ROE-ROA-ROIC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.10" data-path="../../finance/Accounting/复利.html">
+            
+                <a href="../../finance/Accounting/复利.html">
+            
+                    
+                    复利
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.11" data-path="../../finance/Accounting/公司估值法.html">
+            
+                <a href="../../finance/Accounting/公司估值法.html">
+            
+                    
+                    公司估值法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.12" data-path="../../finance/Accounting/重资产和轻资产.html">
+            
+                <a href="../../finance/Accounting/重资产和轻资产.html">
+            
+                    
+                    重资产和轻资产
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <span>
+            
+                    
+                    行业知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="../../finance/Industry/地产.html">
+            
+                <a href="../../finance/Industry/地产.html">
+            
+                    
+                    地产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4.2" data-path="../../finance/Industry/bank.html">
+            
+                <a href="../../finance/Industry/bank.html">
+            
+                    
+                    银行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4.3" data-path="../../finance/Industry/insurance.html">
+            
+                <a href="../../finance/Industry/insurance.html">
+            
+                    
+                    保险
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >iOS基础动画</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#ios&#x57FA;&#x7840;&#x52A8;&#x753B;"><b></b>iOS&#x57FA;&#x7840;&#x52A8;&#x753B;</a></li><li><span class="title-icon "></span><a href="#&#x52A8;&#x753B;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;"><b></b>&#x52A8;&#x753B;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x7C7B;"><b></b>&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#camediatiming&#x534F;&#x8BAE;"><b></b>CAMediaTiming&#x534F;&#x8BAE;</a></li><li><span class="title-icon "></span><a href="#capropertyanimation"><b></b>CAPropertyAnimation</a></li><li><span class="title-icon "></span><a href="#cabasicanimation-&#x57FA;&#x7840;&#x52A8;&#x753B;"><b></b>CABasicAnimation &#x57FA;&#x7840;&#x52A8;&#x753B;</a></li><li><span class="title-icon "></span><a href="#cakeyframeanimation-&#x5173;&#x952E;&#x5E27;&#x52A8;&#x753B;"><b></b>CAKeyframeAnimation &#x5173;&#x952E;&#x5E27;&#x52A8;&#x753B;</a></li><li><span class="title-icon "></span><a href="#catransition-&#x8F6C;&#x573A;&#x52A8;&#x753B;"><b></b>CATransition &#x8F6C;&#x573A;&#x52A8;&#x753B;</a></li><li><span class="title-icon "></span><a href="#caanimationgroup-&#x7EC4;&#x52A8;&#x753B;"><b></b>CAAnimationGroup &#x7EC4;&#x52A8;&#x753B;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="ios&#x57FA;&#x7840;&#x52A8;&#x753B;"><a name="ios&#x57FA;&#x7840;&#x52A8;&#x753B;" class="anchor-navigation-ex-anchor" href="#ios&#x57FA;&#x7840;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>iOS&#x57FA;&#x7840;&#x52A8;&#x753B;</h3>
+<p>iOS&#x5F00;&#x53D1;&#x52A8;&#x753B;&#x7684;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x7684;Core Animation &#x3002;Core Animation&#x7684;&#x52A8;&#x753B;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x662F;&#x5728;&#x540E;&#x53F0;&#x64CD;&#x4F5C;&#x7684;.&#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x4E3B;&#x7EBF;&#x7A0B;&#x3002; Core Animation&#x662F;&#x76F4;&#x63A5;&#x4F5C;&#x7528;&#x5728;CALayer&#x4E0A;&#x7684;&#xFF0C;&#x5E76;&#x975E;UIView</p>
+<h3 id="&#x52A8;&#x753B;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;"><a name="&#x52A8;&#x753B;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x753B;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A8;&#x753B;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;</h3>
+<ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;CAAnimation&#x5BF9;&#x8C61;</li>
+<li>&#x8BBE;&#x7F6E;&#x4E00;&#x4E9B;&#x52A8;&#x753B;&#x7684;&#x76F8;&#x5173;&#x5C5E;&#x6027;</li>
+<li>&#x7ED9;CALayer&#x6DFB;&#x52A0;&#x52A8;&#x753B;&#xFF08;addAnimation:forKey: &#x65B9;&#x6CD5;&#xFF09;</li>
+<li>&#x79FB;&#x9664;CALayer&#x4E2D;&#x7684;&#x52A8;&#x753B;&#xFF08;removeAnimationForKey: &#x65B9;&#x6CD5;&#xFF09;</li>
+</ol>
+<h3 id="&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x7C7B;"><a name="&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6838;&#x5FC3;&#x52A8;&#x753B;&#x7C7B;</h3>
+<p>CAAnimation&#x662F;&#x6240;&#x6709;&#x52A8;&#x753B;&#x5BF9;&#x8C61;&#x7684;&#x7236;&#x7C7B;&#xFF0C;&#x5B9E;&#x73B0;CAMediaTiming&#x534F;&#x8BAE;&#xFF0C;&#x8D1F;&#x8D23;&#x63A7;&#x5236;&#x52A8;&#x753B;&#x7684;&#x65F6;&#x95F4;&#x3001;&#x901F;&#x5EA6;&#x548C;&#x65F6;&#x95F4;&#x66F2;&#x7EBF;&#x7B49;&#x7B49;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;</p>
+<p><img src="media/16833554201607.jpg" alt=""></p>
+<h4 id="caanimation&#x7684;&#x5B50;&#x7C7B;"><a name="caanimation&#x7684;&#x5B50;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#caanimation&#x7684;&#x5B50;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>CAAnimation&#x7684;&#x5B50;&#x7C7B;</h4>
+<ul>
+<li>CABasicAnimation  &#x57FA;&#x7840;&#x52A8;&#x753B;</li>
+<li>CAKeyframeAnimation  &#x5173;&#x952E;&#x5E27;&#x52A8;&#x753B;</li>
+<li>CATransition &#x8F6C;&#x573A;&#x52A8;&#x753B;</li>
+<li>CAAnimationGroup &#x7EC4;&#x52A8;&#x753B;</li>
+<li>CASpringAnimation &#x5F39;&#x6027;&#x52A8;&#x753B; &#xFF08;iOS9.0&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x5F39;&#x7C27;&#x6548;&#x679C;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x662F;CABasicAnimation&#x7684;&#x5B50;&#x7C7B;&#x3002;&#xFF09;</li>
+</ul>
+<h3 id="camediatiming&#x534F;&#x8BAE;"><a name="camediatiming&#x534F;&#x8BAE;" class="anchor-navigation-ex-anchor" href="#camediatiming&#x534F;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a>CAMediaTiming&#x534F;&#x8BAE;</h3>
+<p>CAAnimation&#x7684;&#x5B50;&#x7C7B;&#x90FD;&#x5B9E;&#x73B0;CAMediaTiming&#x534F;&#x8BAE;&#xFF0C; &#x8BE5;&#x534F;&#x8BAE;&#x6709;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;</p>
+<pre><code>@property CFTimeInterval beginTime;
+
+@property CFTimeInterval duration;
+
+@property float speed;
+
+@property CFTimeInterval timeOffset;
+
+@property float repeatCount;
+
+@property CFTimeInterval repeatDuration;
+
+@property BOOL autoreverses;
+
+@property(copy) CAMediaTimingFillMode fillMode;
+</code></pre><h3 id="capropertyanimation"><a name="capropertyanimation" class="anchor-navigation-ex-anchor" href="#capropertyanimation"><i class="fa fa-link" aria-hidden="true"></i></a>CAPropertyAnimation</h3>
+<p><code>CAPropertyAnimation</code> &#x7EE7;&#x627F; <code>CAAnimation</code>, &#x4ED6;&#x6709;&#x4E00;&#x4E2A;<code>keyPath</code>&#x5C5E;&#x6027;</p>
+<p>keyPath&#xFF1A;&#x901A;&#x8FC7;&#x6307;&#x5B9A;CALayer&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x540D;&#x505A;&#x4E3A;keyPath&#x91CC;&#x7684;&#x53C2;&#x6570;(NSString&#x7C7B;&#x578B;)&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;CALayer&#x7684;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x8FBE;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6307;&#x5B9A;@&#x201D;position&#x201D;&#x4E3A;keyPath&#xFF0C;&#x5C31;&#x4FEE;&#x6539;CALayer&#x7684;position&#x5C5E;&#x6027;&#x7684;&#x503C;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x5E73;&#x79FB;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;</p>
+<pre><code>CAPropertyAnimation *animation = [CAPropertyAnimation animationWithKeyPath:@&quot;position.y&quot;];
+[self.view.layer addAnimation:animation forKey:@&quot;position_y&quot;];
+</code></pre><p><strong>animationWithKeyPath&#x503C;&#x7684;&#x603B;&#x7ED3;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x503C;</th>
+<th>&#x8BF4;&#x660E;</th>
+<th>&#x4F7F;&#x7528;&#x5F62;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transform.scale</td>
+<td>&#x6BD4;&#x4F8B;&#x8F6C;&#x5316;</td>
+<td>@(0.8)</td>
+</tr>
+<tr>
+<td>transform.scale.x</td>
+<td>&#x5BBD;&#x7684;&#x6BD4;&#x4F8B;</td>
+<td>@(0.8)</td>
+</tr>
+<tr>
+<td>transform.scale.y</td>
+<td>&#x9AD8;&#x7684;&#x6BD4;&#x4F8B;</td>
+<td>@(0.8)</td>
+</tr>
+<tr>
+<td>transform.rotation.x</td>
+<td>&#x56F4;&#x7ED5;x&#x8F74;&#x65CB;&#x8F6C;</td>
+<td>@(M_PI)</td>
+</tr>
+<tr>
+<td>transform.rotation.y</td>
+<td>&#x56F4;&#x7ED5;y&#x8F74;&#x65CB;&#x8F6C;</td>
+<td>@(M_PI)</td>
+</tr>
+<tr>
+<td>transform.rotation.z</td>
+<td>&#x56F4;&#x7ED5;z&#x8F74;&#x65CB;&#x8F6C;</td>
+<td>@(M_PI)</td>
+</tr>
+<tr>
+<td>cornerRadius</td>
+<td>&#x5706;&#x89D2;&#x7684;&#x8BBE;&#x7F6E;</td>
+<td>@(50)</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>&#x80CC;&#x666F;&#x989C;&#x8272;&#x7684;&#x53D8;&#x5316;</td>
+<td><a href="UIColor%20purpleColor">id</a>.CGColor</td>
+</tr>
+<tr>
+<td>bounds</td>
+<td>&#x5927;&#x5C0F;&#xFF0C;&#x4E2D;&#x5FC3;&#x4E0D;&#x53D8;</td>
+<td>[NSValue valueWithCGRect:CGRectMake(0, 0, 200, 200)];</td>
+</tr>
+<tr>
+<td>position</td>
+<td>&#x4F4D;&#x7F6E;(&#x4E2D;&#x5FC3;&#x70B9;&#x7684;&#x6539;&#x53D8;)</td>
+<td>[NSValue valueWithCGPoint:CGPointMake(300, 300)];</td>
+</tr>
+<tr>
+<td>contents</td>
+<td>&#x5185;&#x5BB9;&#xFF0C;&#x6BD4;&#x5982;UIImageView&#x7684;&#x56FE;&#x7247;</td>
+<td>imageAnima.toValue = <a href="UIImage%20imageNamed:@%22to%22">id</a>.CGImage;</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>&#x900F;&#x660E;&#x5EA6;</td>
+<td>@(0.7)</td>
+</tr>
+<tr>
+<td>contentsRect.size.width</td>
+<td>&#x6A2A;&#x5411;&#x62C9;&#x4F38;&#x7F29;&#x653E;</td>
+<td>@(0.4)&#x6700;&#x597D;&#x662F;0~1&#x4E4B;&#x95F4;&#x7684;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cabasicanimation-&#x57FA;&#x7840;&#x52A8;&#x753B;"><a name="cabasicanimation-&#x57FA;&#x7840;&#x52A8;&#x753B;" class="anchor-navigation-ex-anchor" href="#cabasicanimation-&#x57FA;&#x7840;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>CABasicAnimation &#x57FA;&#x7840;&#x52A8;&#x753B;</h3>
+<pre><code>@interface CABasicAnimation : CAPropertyAnimation
+
+@property(nullable, strong) id fromValue;
+@property(nullable, strong) id toValue;
+@property(nullable, strong) id byValue;
+
+@end
+</code></pre><p>fromValue : keyPath&#x76F8;&#x5E94;&#x5C5E;&#x6027;&#x7684;&#x521D;&#x59CB;&#x503C;</p>
+<p>toValue : keyPath&#x76F8;&#x5E94;&#x5C5E;&#x6027;&#x7684;&#x7ED3;&#x675F;&#x503C;&#xFF0C;&#x5230;&#x67D0;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x503C;&#xFF08;&#x7C7B;&#x4F3C;transform&#x7684;make&#x542B;&#x4E49;&#xFF09;</p>
+<p>&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x52A8;&#x753B;</p>
+<pre><code>CABasicAnimation *animation = [CABasicAnimation animation];
+animation.keyPath = @&quot;position&quot;;
+animation.toValue = [NSValue valueWithCGPoint:CGPointMake(100, 100, 50, 50)];
+animation.duration = 0.5;
+animation.fillMode = kCAFillModeForwards;
+animation.removedOnCompletion = NO;
+[self.view.layer addAnimation: animation forKey:@&quot;position&quot;];
+</code></pre><h3 id="cakeyframeanimation-&#x5173;&#x952E;&#x5E27;&#x52A8;&#x753B;"><a name="cakeyframeanimation-&#x5173;&#x952E;&#x5E27;&#x52A8;&#x753B;" class="anchor-navigation-ex-anchor" href="#cakeyframeanimation-&#x5173;&#x952E;&#x5E27;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>CAKeyframeAnimation &#x5173;&#x952E;&#x5E27;&#x52A8;&#x753B;</h3>
+<pre><code>@interface CAKeyframeAnimation : CAPropertyAnimation
+
+@property(nullable, copy) NSArray *values;
+
+@property(nullable) CGPathRef path;
+
+@end
+</code></pre><p>&#x6BCF;&#x4E2A;&#x70B9;&#x8FDE;&#x8D77;&#x6765;&#x7684;&#x7EBF;&#x5C31;&#x662F;&#x52A8;&#x753B;&#x8F68;&#x8FF9;&#xFF0C;&#x6BCF;&#x4E2A;&#x70B9;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#x3002;</p>
+<p>keyTimes&#xFF1A;&#x53EF;&#x4EE5;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x952E;&#x5E27;&#x6307;&#x5B9A;&#x5BF9;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x70B9;,&#x5176;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A;0&#x5230;1.0&#xFF0C;keyTimes&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x503C;&#x90FD;&#x5BF9;&#x5E94;values&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x5E27;&#x7684;&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x7684;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x5F53;keyTimes&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x7684;&#x65F6;&#x5019;,&#x5404;&#x4E2A;&#x5173;&#x952E;&#x5E27;&#x7684;&#x65F6;&#x95F4;&#x662F;&#x5E73;&#x5206;&#x7684;</p>
+<p>path&#xFF1A;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;CGPathRef&#x3001;CGMutablePathRef&#xFF0C;&#x8BA9;&#x5C42;&#x8DDF;&#x7740;&#x8DEF;&#x5F84;&#x79FB;&#x52A8;&#xFF0C;path&#x53EA;&#x5BF9;CALayer&#x7684;anchorPoint&#x548C;position&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;path&#xFF0C;&#x90A3;&#x4E48;values&#x3001;keyTimes&#x5C06;&#x88AB;&#x5FFD;&#x7565;&#x3002;</p>
+<pre><code>//&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x5C5E;&#x6027;
+CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@&quot;position&quot;];
+NSValue *p1 = [NSValue valueWithCGPoint:CGPointMake(50, 150)];
+NSValue *p2 = [NSValue valueWithCGPoint:CGPointMake(250, 150)];
+NSValue *p3 = [NSValue valueWithCGPoint:CGPointMake(50, 550)];
+NSValue *p4 = [NSValue valueWithCGPoint:CGPointMake(250, 550)];
+animation.values = @[p1, p2, p3, p4];
+animation.keyTimes = @[ [NSNumber numberWithFloat:0.0],
+                        [NSNumber numberWithFloat:0.4],
+                        [NSNumber numberWithFloat:0.8],
+                        [NSNumber numberWithFloat:1.0]];
+</code></pre><h3 id="catransition-&#x8F6C;&#x573A;&#x52A8;&#x753B;"><a name="catransition-&#x8F6C;&#x573A;&#x52A8;&#x753B;" class="anchor-navigation-ex-anchor" href="#catransition-&#x8F6C;&#x573A;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>CATransition &#x8F6C;&#x573A;&#x52A8;&#x753B;</h3>
+<pre><code>@interface CATransition : CAAnimation
+
+
+@property(copy) CATransitionType type;
+
+@property(nullable, copy) CATransitionSubtype subtype;
+
+@property float startProgress;
+@property float endProgress;
+
+@end
+</code></pre><ul>
+<li>type&#xFF1A;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x8FC7;&#x6E21;&#x7684;&#x7C7B;&#x578B;</li>
+<li>subtype&#xFF1A;&#x8BBE;&#x7F6E;&#x52A8;&#x753B;&#x8FC7;&#x6E21;&#x65B9;&#x5411;</li>
+<li>startProgress&#xFF1A;&#x52A8;&#x753B;&#x8D77;&#x70B9;(&#x5728;&#x6574;&#x4F53;&#x52A8;&#x753B;&#x7684;&#x767E;&#x5206;&#x6BD4;)</li>
+<li>endProgress&#xFF1A;&#x52A8;&#x753B;&#x7EC8;&#x70B9;(&#x5728;&#x6574;&#x4F53;&#x52A8;&#x753B;&#x7684;&#x767E;&#x5206;&#x6BD4;)</li>
+</ul>
+<p>&#x6784;&#x5EFA;&#x8F6C;&#x573A;&#x52A8;&#x753B;</p>
+<pre><code>CATransition *ani = [CATransition animation];
+ani.type = @&quot;rippleEffect&quot;; //&#x6C34;&#x6EF4;&#x5165;&#x6C34;&#x632F;&#x52A8;&#x7684;&#x6548;&#x679C;
+ani.subtype = kCATransitionFromLeft;
+ani.duration = 1.5;
+[self.imageView.layer addAnimation:ani forKey:nil];
+</code></pre><h3 id="caanimationgroup-&#x7EC4;&#x52A8;&#x753B;"><a name="caanimationgroup-&#x7EC4;&#x52A8;&#x753B;" class="anchor-navigation-ex-anchor" href="#caanimationgroup-&#x7EC4;&#x52A8;&#x753B;"><i class="fa fa-link" aria-hidden="true"></i></a>CAAnimationGroup &#x7EC4;&#x52A8;&#x753B;</h3>
+<p>animations&#xFF1A;&#x52A8;&#x753B;&#x7EC4;&#xFF0C;&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x4E00;&#x7EC4;&#x52A8;&#x753B;&#x5BF9;&#x8C61;&#x7684;NSArray</p>
+<pre><code>// 2. &#x5411;&#x7EC4;&#x52A8;&#x753B;&#x4E2D;&#x6DFB;&#x52A0;&#x5404;&#x79CD;&#x5B50;&#x52A8;&#x753B;
+// 2.1 &#x65CB;&#x8F6C;
+CABasicAnimation *anim1 = [CABasicAnimation animationWithKeyPath:@&quot;transform.rotation.z&quot;];
+// anim1.toValue = @(M_PI * 2 * 500);
+anim1.byValue = @(M_PI * 2 * 1000);
+
+// 2.2 &#x7F29;&#x653E;
+CABasicAnimation *anim2 = [CABasicAnimation animationWithKeyPath:@&quot;transform.scale&quot;];
+anim2.toValue = @(0.1);
+
+// 2.3 &#x6539;&#x53D8;&#x4F4D;&#x7F6E;, &#x4FEE;&#x6539;position
+CAKeyframeAnimation *anim3 = [CAKeyframeAnimation animationWithKeyPath:@&quot;position&quot;];
+anim3.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(50, 100, 250, 100)].CGPath;
+
+// &#x628A;&#x5B50;&#x52A8;&#x753B;&#x6DFB;&#x52A0;&#x5230;&#x7EC4;&#x52A8;&#x753B;&#x4E2D;
+CAAnimationGroup *groupAnima = [CAAnimationGroup animation];
+
+groupAnima.animations = @[ anim1, anim2, anim3];
+
+groupAnima.duration = 2.0;
+[self.imageView.layer addAnimation:groupAnima forKey:@&quot;animationGroup&quot;];
+</code></pre><script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="FMDB总结.html" class="navigation navigation-prev " aria-label="Previous page: FMDB总结">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Cordova总结.html" class="navigation navigation-next " aria-label="Next page: Cordova总结">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"iOS基础动画","level":"3.1.21","depth":2,"next":{"title":"Cordova总结","level":"3.1.22","depth":2,"path":"ios/notes/Cordova总结.md","ref":"ios/notes/Cordova总结.md","articles":[]},"previous":{"title":"FMDB总结","level":"3.1.20","depth":2,"path":"ios/notes/FMDB总结.md","ref":"ios/notes/FMDB总结.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore","popup","3-ba","katex","sectionx","donate"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"plugins":["lightbox"],"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"popup":{},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./favicon.ico"},"code":{"copyButtons":true},"donate":{"alipay":"https://s4.ax1x.com/2021/12/08/oRstij.png","alipayText":"支付宝","button":"点我吧","title":"如果喜欢，支持一下","wechat":"https://s4.ax1x.com/2021/12/08/oRsazq.png","wechatText":"微信"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"lightbox":{"includeJQuery":false,"sameUuid":true,"options":{"resizeDuration":500,"wrapAround":false}},"theme-comscore":{},"3-ba":{"configuration":"auto","token":"370434a8473e3f2ea2f893934255b77d"},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"http://sohod.cn","target":"_blank","name":"风车大战骑士"}]}},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人博客":"https://www.sohod.cn/"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"ios/notes/iOS基础动画.md","mtime":"2023-05-06T07:26:33.759Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-08T09:36:57.447Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

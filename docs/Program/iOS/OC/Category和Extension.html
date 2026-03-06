@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>触摸事件传递和响应原理 · 个人笔记</title>
+        <title>Category和Extension · 个人笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -100,8 +100,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="isa和Class.html" />
     
-    <link rel="prev" href="iOS事件响应原理.html" />
+    
+    <link rel="prev" href="OC消息机制.html" />
     
 
     
@@ -475,7 +477,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="Category和Extension.html">
+        <li class="chapter active" data-level="3.2.5" data-path="Category和Extension.html">
             
                 <a href="Category和Extension.html">
             
@@ -611,7 +613,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3.6" data-path="触摸事件传递和响应原理.html">
+        <li class="chapter " data-level="3.3.6" data-path="触摸事件传递和响应原理.html">
             
                 <a href="触摸事件传递和响应原理.html">
             
@@ -1507,7 +1509,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >触摸事件传递和响应原理</a>
+        <a href="../../.." >Category和Extension</a>
     </h1>
 </div>
 
@@ -1525,35 +1527,77 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x548C;&#x54CD;&#x5E94;&#x539F;&#x7406;"><b></b>&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x548C;&#x54CD;&#x5E94;&#x539F;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F20;&#x9012;&#x6D41;&#x7A0B;&#x603B;&#x89C8;"><b></b>&#x4F20;&#x9012;&#x6D41;&#x7A0B;&#x603B;&#x89C8;</a></li><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x770B;&#x5F97;&#x89C1;&#x5374;&#x70B9;&#x4E0D;&#x5230;"><b></b>&#x4E3A;&#x4EC0;&#x4E48;&#x201C;&#x770B;&#x5F97;&#x89C1;&#x5374;&#x70B9;&#x4E0D;&#x5230;&#x201D;</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;"><b></b>&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x547D;&#x4E2D;&#x533A;&#x57DF;"><b></b>&#x81EA;&#x5B9A;&#x4E49;&#x547D;&#x4E2D;&#x533A;&#x57DF;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x6218;&#x5EFA;&#x8BAE;"><b></b>&#x5B9E;&#x6218;&#x5EFA;&#x8BAE;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x548C;&#x54CD;&#x5E94;&#x539F;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x548C;&#x54CD;&#x5E94;&#x539F;&#x7406;"><a name="&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x548C;&#x54CD;&#x5E94;&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x548C;&#x54CD;&#x5E94;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x548C;&#x54CD;&#x5E94;&#x539F;&#x7406;</h1>
-<h2 id="&#x4F20;&#x9012;&#x6D41;&#x7A0B;&#x603B;&#x89C8;"><a name="&#x4F20;&#x9012;&#x6D41;&#x7A0B;&#x603B;&#x89C8;" class="anchor-navigation-ex-anchor" href="#&#x4F20;&#x9012;&#x6D41;&#x7A0B;&#x603B;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F20;&#x9012;&#x6D41;&#x7A0B;&#x603B;&#x89C8;</h2>
-<p>&#x4E00;&#x6B21;&#x89E6;&#x6478;&#x4ECE;&#x7CFB;&#x7EDF;&#x5C42;&#x8FDB;&#x5165;&#x5E94;&#x7528;&#x540E;&#xFF0C;&#x4F1A;&#x88AB;&#x5C01;&#x88C5;&#x6210; <code>UIEvent</code>&#xFF0C;&#x7136;&#x540E;&#x6309;&#x7A97;&#x53E3;&#x548C;&#x89C6;&#x56FE;&#x5C42;&#x7EA7;&#x5206;&#x53D1;&#x3002;&#x6838;&#x5FC3;&#x70B9;&#x5728;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<ul>
-<li><code>hitTest:withEvent:</code>&#xFF1A;&#x51B3;&#x5B9A;&#x6700;&#x7EC8;&#x547D;&#x4E2D;&#x89C6;&#x56FE;</li>
-<li><code>pointInside:withEvent:</code>&#xFF1A;&#x5224;&#x65AD;&#x89E6;&#x70B9;&#x662F;&#x5426;&#x5728;&#x89C6;&#x56FE;&#x6709;&#x6548;&#x533A;&#x57DF;</li>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#category&#x548C;extension"><b></b>Category&#x548C;Extension</a></li><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x573A;&#x666F;"><b></b>&#x5E94;&#x7528;&#x573A;&#x666F;</a></li><ul><li><span class="title-icon "></span><a href="#category"><b></b>Category</a></li><li><span class="title-icon "></span><a href="#category&#x7684;&#x7528;&#x6CD5;"><b></b>Category&#x7684;&#x7528;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#extension"><b></b>Extension</a></li></ul><li><span class="title-icon "></span><a href="#category&#x548C;extension&#x7684;&#x533A;&#x522B;"><b></b>Category&#x548C;Extension&#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;category&#x4E0D;&#x80FD;&#x50CF;extension&#x4E00;&#x6837;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;"><b></b>&#x4E3A;&#x4EC0;&#x4E48;Category&#x4E0D;&#x80FD;&#x50CF;Extension&#x4E00;&#x6837;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#category&#x7684;&#x539F;&#x7406;"><b></b>Category&#x7684;&#x539F;&#x7406;</a></li></ul></ul></div><a href="#category&#x548C;extension" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="category&#x548C;extension"><a name="category&#x548C;extension" class="anchor-navigation-ex-anchor" href="#category&#x548C;extension"><i class="fa fa-link" aria-hidden="true"></i></a>Category&#x548C;Extension</h1>
+<h2 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h2>
+<p>Category&#xFF08;&#x5206;&#x7C7B;/&#x7C7B;&#x522B;&#xFF09; &#x662F; OC &#x7684;&#x8BED;&#x8A00;&#x7279;&#x6027;&#xFF0C;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x4E3A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x7C7B;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;&#x3002;Category &#x53EF;&#x4EE5;&#x505A;&#x5230;&#x5728;&#x65E2;&#x4E0D;&#x5B50;&#x7C7B;&#x5316;&#xFF0C;&#x4E5F;&#x4E0D;&#x4FB5;&#x5165;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x6E90;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E3A;&#x539F;&#x6709;&#x7684;&#x7C7B;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x6269;&#x5C55;&#x4E00;&#x4E2A;&#x7C7B;&#x6216;&#x8005;&#x5206;&#x79BB;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x76EE;&#x7684;&#x3002;&#x5728;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x4E2D;&#x6211;&#x4EEC;&#x5E38;&#x5E38;&#x4F7F;&#x7528; Category &#x4E3A;&#x5DF2;&#x6709;&#x7684;&#x7C7B;&#x6269;&#x5C55;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x7EE7;&#x627F;&#x4E5F;&#x80FD;&#x4E3A;&#x5DF2;&#x6709;&#x7C7B;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x80FD;&#x76F4;&#x63A5;&#x589E;&#x52A0;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x589E;&#x52A0;&#x4E86;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x4EE3;&#x7801;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x4E0E;&#x7236;&#x7C7B;&#x7684;&#x539F;&#x59CB;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x533A;&#x5206;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F18;&#x5148;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49; Category&#xFF08;&#x5206;&#x7C7B;&#xFF09;</p>
+<h2 id="&#x5E94;&#x7528;&#x573A;&#x666F;"><a name="&#x5E94;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x573A;&#x666F;</h2>
+<h3 id="category"><a name="category" class="anchor-navigation-ex-anchor" href="#category"><i class="fa fa-link" aria-hidden="true"></i></a>Category</h3>
+<p>Category&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x4E3A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x7C7B;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x8FD8;&#x6709;&#x5176;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;</p>
+<ol>
+<li>&#x53EF;&#x4EE5;&#x628A;&#x7C7B;&#x7684;&#x5B9E;&#x73B0;&#x5206;&#x5F00;&#x5728;&#x51E0;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x6709;&#x51E0;&#x4E2A;&#x663E;&#x800C;&#x6613;&#x89C1;&#x7684;&#x597D;&#x5904;&#xFF0C;<ul>
+<li>&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4F53;&#x79EF; </li>
+<li>&#x53EF;&#x4EE5;&#x628A;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#x7EC4;&#x7EC7;&#x5230;&#x4E0D;&#x540C;&#x7684;category&#x91CC; </li>
+<li>&#x53EF;&#x4EE5;&#x7531;&#x591A;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x5171;&#x540C;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x7C7B; </li>
+<li>&#x53EF;&#x4EE5;&#x6309;&#x9700;&#x52A0;&#x8F7D;&#x60F3;&#x8981;&#x7684;category &#x7B49;&#x7B49;&#x3002;</li>
 </ul>
-<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x770B;&#x5F97;&#x89C1;&#x5374;&#x70B9;&#x4E0D;&#x5230;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x770B;&#x5F97;&#x89C1;&#x5374;&#x70B9;&#x4E0D;&#x5230;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x770B;&#x5F97;&#x89C1;&#x5374;&#x70B9;&#x4E0D;&#x5230;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;&#x201C;&#x770B;&#x5F97;&#x89C1;&#x5374;&#x70B9;&#x4E0D;&#x5230;&#x201D;</h2>
-<p>&#x5E38;&#x89C1;&#x539F;&#x56E0;&#xFF1A;</p>
+</li>
+<li>&#x58F0;&#x660E;&#x79C1;&#x6709;&#x65B9;&#x6CD5;</li>
+<li>&#x6A21;&#x62DF;&#x591A;&#x7EE7;&#x627F;</li>
+<li>&#x628A;framework&#x7684;&#x79C1;&#x6709;&#x65B9;&#x6CD5;&#x516C;&#x5F00;</li>
+</ol>
+<h3 id="category&#x7684;&#x7528;&#x6CD5;"><a name="category&#x7684;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#category&#x7684;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Category&#x7684;&#x7528;&#x6CD5;</h3>
 <ul>
-<li>&#x89E6;&#x70B9;&#x5728;&#x89C6;&#x56FE; frame &#x5916;</li>
-<li>&#x7236;&#x89C6;&#x56FE;&#x7981;&#x7528;&#x4EA4;&#x4E92;</li>
-<li>&#x4E0A;&#x5C42;&#x900F;&#x660E;&#x89C6;&#x56FE;&#x62E6;&#x622A;</li>
-<li>&#x624B;&#x52BF;&#x8BC6;&#x522B;&#x5668;&#x63D0;&#x524D;&#x6D88;&#x8D39;</li>
+<li>Category&#x7684;&#x5C0F;&#x62EC;&#x53F7;&#x5185;&#x4E00;&#x5B9A;&#x8981;&#x6709;&#x540D;&#x5B57;</li>
 </ul>
-<h2 id="&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;"><a name="&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x4F18;&#x5148;&#x7EA7;</h2>
-<p>&#x901A;&#x5E38;&#x5148;&#x547D;&#x4E2D;&#x5177;&#x4F53; view&#xFF0C;&#x518D;&#x8FDB;&#x5165;&#x8BE5; view &#x7684;&#x54CD;&#x5E94;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x8BE5; view &#x4E0D;&#x5904;&#x7406;&#xFF0C;&#x518D;&#x6CBF;&#x54CD;&#x5E94;&#x94FE;&#x5411;&#x4E0A;&#x3002;</p>
-<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x7236;&#x89C6;&#x56FE;&#x53EF;&#x4F5C;&#x4E3A;&#x515C;&#x5E95;&#x5C42;&#xFF0C;&#x4F46;&#x4E0D;&#x5E94;&#x8FC7;&#x5EA6;&#x627F;&#x8F7D;&#x5B50;&#x89C6;&#x56FE;&#x903B;&#x8F91;&#x3002;</p>
-<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x547D;&#x4E2D;&#x533A;&#x57DF;"><a name="&#x81EA;&#x5B9A;&#x4E49;&#x547D;&#x4E2D;&#x533A;&#x57DF;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;&#x547D;&#x4E2D;&#x533A;&#x57DF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5B9A;&#x4E49;&#x547D;&#x4E2D;&#x533A;&#x57DF;</h2>
-<p>&#x6309;&#x94AE;&#x53EF;&#x901A;&#x8FC7;&#x91CD;&#x5199; <code>pointInside</code> &#x6269;&#x5927;&#x70B9;&#x51FB;&#x70ED;&#x533A;&#xFF0C;&#x63D0;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#x3002;&#x5B9E;&#x73B0;&#x65F6;&#x8981;&#x907F;&#x514D;&#x8986;&#x76D6;&#x76F8;&#x90BB;&#x63A7;&#x4EF6;&#x70ED;&#x70B9;&#x3002;</p>
-<h2 id="&#x5B9E;&#x6218;&#x5EFA;&#x8BAE;"><a name="&#x5B9E;&#x6218;&#x5EFA;&#x8BAE;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x6218;&#x5EFA;&#x8BAE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#x5EFA;&#x8BAE;</h2>
+<pre><code>#import 
+@interface NSObject (Category)
+
+- (void)myMethod;
+
+@end
+</code></pre><h3 id="extension"><a name="extension" class="anchor-navigation-ex-anchor" href="#extension"><i class="fa fa-link" aria-hidden="true"></i></a>Extension</h3>
+<p>Extension&#x4F5C;&#x7528;:</p>
 <ul>
-<li>&#x5217;&#x8868;&#x573A;&#x666F;&#x4F18;&#x5148;&#x4FDD;&#x8BC1; cell &#x70B9;&#x51FB;&#x8DEF;&#x5F84;&#x6E05;&#x6670;&#x3002;</li>
-<li>&#x624B;&#x52BF;&#x4E0E;&#x70B9;&#x51FB;&#x5E76;&#x5B58;&#x65F6;&#x5B9E;&#x73B0;&#x624B;&#x52BF;&#x4EE3;&#x7406;&#xFF0C;&#x7CBE;&#x7EC6;&#x63A7;&#x5236;&#x662F;&#x5426;&#x540C;&#x65F6;&#x8BC6;&#x522B;&#x3002;</li>
-<li>&#x9047;&#x5230;&#x590D;&#x6742;&#x51B2;&#x7A81;&#x5148;&#x753B;&#x89C6;&#x56FE;&#x5C42;&#x7EA7;&#x56FE;&#xFF0C;&#x518D;&#x505A;&#x4EE3;&#x7801;&#x8C03;&#x6574;&#x3002;</li>
+<li>&#x80FD;&#x4E3A;&#x67D0;&#x4E2A;&#x7C7B;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;,&#x5C5E;&#x6027;,&#x65B9;&#x6CD5;;</li>
+<li>&#x4E00;&#x822C;&#x7684;&#x7C7B;&#x6269;&#x5C55;&#x5199;&#x5230;.m&#x6587;&#x4EF6;&#x4E2D;;</li>
+<li>&#x4E00;&#x822C;&#x7684;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x5199;&#x5230;&#x7C7B;&#x6269;&#x5C55;&#x4E2D;</li>
 </ul>
-<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h2>
-<p>&#x89E6;&#x6478;&#x95EE;&#x9898;&#x7684;&#x672C;&#x8D28;&#x662F;&#x201C;&#x8C01;&#x5148;&#x62FF;&#x5230;&#x4E8B;&#x4EF6;&#x3001;&#x8C01;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x7EE7;&#x7EED;&#x4F20;&#x9012;&#x201D;&#x3002;&#x53EA;&#x8981;&#x628A;&#x547D;&#x4E2D;&#x89C4;&#x5219;&#x548C;&#x54CD;&#x5E94;&#x94FE;&#x7406;&#x6E05;&#xFF0C;&#x4EA4;&#x4E92;&#x6545;&#x969C;&#x901A;&#x5E38;&#x90FD;&#x80FD;&#x5FEB;&#x901F;&#x4FEE;&#x590D;&#x3002;</p>
-<script type="text/javascript">var className='atoc';</script>
+<pre><code>@interface ViewController ()   &lt;UITableViewDelegate&gt;
+
+@property (nonatomic, strong) UITableView *tableView;
+
+@end
+
+@implementation ViewController
+
+@end
+</code></pre><h2 id="category&#x548C;extension&#x7684;&#x533A;&#x522B;"><a name="category&#x548C;extension&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#category&#x548C;extension&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>Category&#x548C;Extension&#x7684;&#x533A;&#x522B;</h2>
+<p>Category&#xFF08;&#x5206;&#x7C7B;&#xFF09;&#x770B;&#x8D77;&#x6765;&#x548C; Extension&#xFF08;&#x6269;&#x5C55;&#xFF09;&#x6709;&#x70B9;&#x76F8;&#x4F3C;&#x3002;Extension&#xFF08;&#x6269;&#x5C55;&#xFF09;&#x6709;&#x65F6;&#x5019;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A; &#x533F;&#x540D;&#x5206;&#x7C7B;&#x3002;&#x4F46;&#x4E24;&#x8005;&#x5B9E;&#x8D28;&#x4E0A;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<p>Extension&#xFF08;&#x6269;&#x5C55;&#xFF09;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x4E0E;&#x8BE5;&#x7C7B;&#x540C;&#x65F6;&#x7F16;&#x8BD1;&#x7684;&#xFF0C;&#x662F;&#x7C7B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x800C;&#x4E14; Extension&#xFF08;&#x6269;&#x5C55;&#xFF09;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x5728;&#x8BE5;&#x7C7B;&#x7684;<code>@implementation</code> &#x4E2D;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x4F60;&#x65E0;&#x6CD5;&#x5BF9;&#x7CFB;&#x7EDF;&#x7684;&#x7C7B;&#x4F7F;&#x7528; Extension&#xFF08;&#x6269;&#x5C55;&#xFF09;</p>
+<ul>
+<li>Category&#x662F;&#x8FD0;&#x884C;&#x65F6;&#x51B3;&#x5B9A;&#x751F;&#x6548;&#x7684;&#xFF0C;Extension&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x51B3;&#x5B9A;&#x751F;&#x6548;&#x7684;</li>
+<li>Category&#x53EF;&#x4EE5;&#x4E3A;&#x7CFB;&#x7EDF;&#x7C7B;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;&#xFF0C;Extension&#x4E0D;&#x80FD;</li>
+<li>Category&#x662F;&#x6709;&#x58F0;&#x660E;&#x548C;&#x5B9E;&#x73B0;&#xFF0C;Extension&#x76F4;&#x63A5;&#x5199;&#x5728;&#x5BBF;&#x4E3B;.m&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x6709;&#x58F0;&#x660E;</li>
+<li>Category&#x53EA;&#x80FD;&#x6269;&#x5145;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x80FD;&#x6269;&#x5145;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x548C;&#x5C5E;&#x6027;</li>
+<li>&#x5982;&#x679C;Category&#x58F0;&#x660E;&#x4E86;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;,&#x90A3;&#x4E48;Category&#x53EA;&#x4F1A;&#x751F;&#x6210;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x7684;set,get&#x65B9;&#x6CD5;&#x7684;&#x58F0;&#x660E;,&#x4E5F;&#x5C31;&#x4E0D;&#x662F;&#x4F1A;&#x5B9E;&#x73B0;</li>
+</ul>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;category&#x4E0D;&#x80FD;&#x50CF;extension&#x4E00;&#x6837;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;"><a name="&#x4E3A;&#x4EC0;&#x4E48;category&#x4E0D;&#x80FD;&#x50CF;extension&#x4E00;&#x6837;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;category&#x4E0D;&#x80FD;&#x50CF;extension&#x4E00;&#x6837;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;Category&#x4E0D;&#x80FD;&#x50CF;Extension&#x4E00;&#x6837;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;</h2>
+<p>&#x56E0;&#x4E3A; Extension&#xFF08;&#x6269;&#x5C55;&#xFF09;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x4E0E;&#x8BE5;&#x7C7B;&#x540C;&#x65F6;&#x7F16;&#x8BD1;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x7C7B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x65E2;&#x7136;&#x4F5C;&#x4E3A;&#x7C7B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4E14;&#x4E0E;&#x7C7B;&#x540C;&#x65F6;&#x7F16;&#x8BD1;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x4E3A;&#x7C7B;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x800C; Category&#xFF08;&#x5206;&#x7C7B;&#xFF09;&#x4E0D;&#x540C;&#xFF0C; Category&#xFF08;&#x5206;&#x7C7B;&#xFF09;&#x7684;&#x7279;&#x6027;&#x662F;&#xFF1A;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x9636;&#x6BB5;&#x52A8;&#x6001;&#x5730;&#x4E3A;&#x5DF2;&#x6709;&#x7C7B;&#x6DFB;&#x52A0;&#x65B0;&#x884C;&#x4E3A;&#x3002; Category&#xFF08;&#x5206;&#x7C7B;&#xFF09;&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x671F;&#x95F4;&#x51B3;&#x5B9A;&#x7684;&#x3002;&#x800C;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684;&#x5185;&#x5B58;&#x5E03;&#x5C40;&#x5DF2;&#x7ECF;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x786E;&#x5B9A;&#x597D;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x9636;&#x6BB5;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x4F1A;&#x7834;&#x574F;&#x539F;&#x6709;&#x7C7B;&#x7684;&#x5185;&#x5B58;&#x5E03;&#x5C40;&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;&#x53EF;&#x6015;&#x7684;&#x540E;&#x679C;&#xFF0C;&#x6240;&#x4EE5; Category&#xFF08;&#x5206;&#x7C7B;&#xFF09;&#x65E0;&#x6CD5;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#x53D8;&#x91CF;</p>
+<h2 id="category&#x7684;&#x539F;&#x7406;"><a name="category&#x7684;&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#category&#x7684;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>Category&#x7684;&#x539F;&#x7406;</h2>
+<p>&#x6240;&#x6709;&#x7684;OC&#x7C7B;&#x548C;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;runtime&#x5C42;&#x90FD;&#x662F;&#x7528;struct&#x8868;&#x793A;&#x7684;&#xFF0C;category&#x4E5F;&#x662F;&#xFF0C;&#x5728;runtime&#x5C42;&#xFF0C;category&#x7528;&#x7ED3;&#x6784;&#x4F53;category_t&#xFF08;&#x5728;objc-runtime-new.h&#x4E2D;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x6B64;&#x5B9A;&#x4E49;&#xFF09;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E86;</p>
+<pre><code>typedef struct category_t *Category;
+
+struct category_t {
+    const char *name;                                // &#x7C7B;&#x540D;
+    classref_t cls;                                  // &#x7C7B;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x9636;&#x6BB5;&#x901A;&#x8FC7; clasee_name&#xFF08;&#x7C7B;&#x540D;&#xFF09;&#x5BF9;&#x5E94;&#x5230;&#x7C7B;&#x5BF9;&#x8C61;
+    struct method_list_t *instanceMethods;           // Category &#x4E2D;&#x6240;&#x6709;&#x6DFB;&#x52A0;&#x7684;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x5217;&#x8868;
+    struct method_list_t *classMethods;              // Category &#x4E2D;&#x6240;&#x6709;&#x6DFB;&#x52A0;&#x7684;&#x7C7B;&#x65B9;&#x6CD5;&#x5217;&#x8868;
+    struct protocol_list_t *protocols;               // Category &#x4E2D;&#x5B9E;&#x73B0;&#x7684;&#x6240;&#x6709;&#x534F;&#x8BAE;&#x5217;&#x8868;
+    struct property_list_t *instanceProperties;      // Category &#x4E2D;&#x6DFB;&#x52A0;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;
+};
+</code></pre><script type="text/javascript">var className='atoc';</script>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -1597,10 +1641,14 @@
 
             
                 
-                <a href="iOS事件响应原理.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: iOS事件响应原理">
+                <a href="OC消息机制.html" class="navigation navigation-prev " aria-label="Previous page: OC消息机制">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="isa和Class.html" class="navigation navigation-next " aria-label="Next page: isa和Class">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1609,7 +1657,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"触摸事件传递和响应原理","level":"3.3.6","depth":2,"next":{"title":"iOS工程实践","level":"3.4","depth":1,"ref":"","articles":[{"title":"Block总结","level":"3.4.1","depth":2,"path":"Program/iOS/OC/Block总结.md","ref":"Program/iOS/OC/Block总结.md","articles":[]},{"title":"FMDB总结","level":"3.4.2","depth":2,"path":"Program/iOS/OC/FMDB总结.md","ref":"Program/iOS/OC/FMDB总结.md","articles":[]},{"title":"iOS输入框一些问题","level":"3.4.3","depth":2,"path":"Program/iOS/Others/iOS输入框一些问题.md","ref":"Program/iOS/Others/iOS输入框一些问题.md","articles":[]},{"title":"iOS文件及持久化","level":"3.4.4","depth":2,"path":"Program/iOS/Others/iOS文件及持久化.md","ref":"Program/iOS/Others/iOS文件及持久化.md","articles":[]},{"title":"cell事件和didSelect冲突","level":"3.4.5","depth":2,"path":"Program/iOS/Others/cell事件和didSelect冲突.md","ref":"Program/iOS/Others/cell事件和didSelect冲突.md","articles":[]}]},"previous":{"title":"iOS事件响应原理","level":"3.3.5","depth":2,"path":"Program/iOS/OC/iOS事件响应原理.md","ref":"Program/iOS/OC/iOS事件响应原理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore","popup","3-ba","katex","sectionx","donate"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"popup":{},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./favicon.ico"},"code":{"copyButtons":true},"donate":{"alipay":"https://s4.ax1x.com/2021/12/08/oRstij.png","alipayText":"支付宝","button":"点我吧","title":"如果喜欢，支持一下","wechat":"https://s4.ax1x.com/2021/12/08/oRsazq.png","wechatText":"微信"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"theme-comscore":{},"3-ba":{"configuration":"auto","token":"370434a8473e3f2ea2f893934255b77d"},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"http://sohod.cn","target":"_blank","name":"风车大战骑士"}]}},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人博客":"https://www.sohod.cn/"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"Program/iOS/OC/触摸事件传递和响应原理.md","mtime":"2026-03-06T03:10:23.183Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-06T03:11:20.356Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Category和Extension","level":"3.2.5","depth":2,"next":{"title":"isa和Class","level":"3.2.6","depth":2,"path":"Program/iOS/OC/isa和Class.md","ref":"Program/iOS/OC/isa和Class.md","articles":[]},"previous":{"title":"OC消息机制","level":"3.2.4","depth":2,"path":"Program/iOS/OC/OC消息机制.md","ref":"Program/iOS/OC/OC消息机制.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","search-pro","advanced-emoji","include-codeblock","-sharing","local-video","simple-page-toc","expandable-chapters","chapter-fold","favicon","hide-element","anchor-navigation-ex","code","atoc","theme-comscore","popup","3-ba","katex","sectionx","donate"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"chapter-fold":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"atoc":{"addClass":true,"className":"atoc"},"search-pro":{},"autocover":{"font":{"size":null,"family":"Impact","color":"#FFF"},"size":{"w":1800,"h":2360},"background":{"color":"#09F"}},"popup":{},"theme-fexa":{"search-placeholder":"输入关键字搜索","logo":"./logo.png","favicon":"./favicon.ico"},"code":{"copyButtons":true},"donate":{"alipay":"https://s4.ax1x.com/2021/12/08/oRstij.png","alipayText":"支付宝","button":"点我吧","title":"如果喜欢，支持一下","wechat":"https://s4.ax1x.com/2021/12/08/oRsazq.png","wechatText":"微信"},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/logo.png","appleTouchMore":{"120x120":"assets/images/logo.png","180x180":"assets/images/logo.png"}},"theme-comscore":{},"3-ba":{"configuration":"auto","token":"370434a8473e3f2ea2f893934255b77d"},"local-video":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","keywords":"markdown,gitbook,","author":"Jack","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"http://sohod.cn","target":"_blank","name":"风车大战骑士"}]}},"title":"个人笔记","language":"zh-hans","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"个人博客":"https://www.sohod.cn/"}},"gitbook":"*","description":"Jack Hu, 风车大战骑士"},"file":{"path":"Program/iOS/OC/Category和Extension.md","mtime":"2026-03-06T03:06:52.701Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-03-06T03:11:20.356Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -11,6 +11,8 @@
         * [UDP协议](Basic/Network/UDP协议.md)
         * [Socket](Basic/Network/Socket.md)
         * [WebSocket](Basic/Network/WebSocket.md)
+        * [HTTP缓存实战排查清单](Basic/Network/HTTP缓存实战排查清单.md)
+        * [WebSocket心跳与断线重连](Basic/Network/WebSocket心跳与断线重连.md)
     * 数据结构
         * [链表](Basic/DataStruct/LinkList.md)
         * [树](Basic/DataStruct/Tree.md)
@@ -19,12 +21,14 @@
     * MySQL
         * [MySQL基本](Basic/MySQL/MySQL基本.md)
         * [MySQL多表查询](Basic/MySQL/MySQL多表查询.md)
+        * [MySQL索引失效10个场景](Basic/MySQL/MySQL索引失效10个场景.md)
     * 命令类
         * [Linux常用命令](Basic/Command/commonUse.md)
         * [iptables防火墙](Basic/Command/iptables.md)
         * [firewall防火墙](Basic/Command/firewall.md)
         * [Mac Apache操作](Basic/Command/MacApache.md)
         * [Mac Nginx操作](Basic/Command/MacNginx.md)
+        * [Linux线上CPU飙高排查流程](Basic/Command/Linux线上CPU飙高排查流程.md)
 
 ----
 ##  编程相关 
@@ -58,6 +62,7 @@
         * [iOS输入框一些问题](Program/iOS/Others/iOS输入框一些问题.md)
         * [iOS文件及持久化](Program/iOS/Others/iOS文件及持久化.md)
         * [cell事件和didSelect冲突](Program/iOS/Others/cell事件和didSelect冲突.md)
+        * [iOS卡顿监控落地](Program/iOS/Others/iOS卡顿监控落地.md)
 
 * JAVA
     * 疑难杂症
@@ -89,6 +94,7 @@
     * [曼昆](Finance/Notes/曼昆.md)
     * [货币社融和信贷](Finance/Notes/货币社融和信贷.md)
     * [投资有规律](Finance/Notes/投资有规律.md)
+    * [现金流优先选股框架](Finance/Notes/现金流优先选股框架.md)
 * 财务知识
     * [A股财报披露知识](Finance/Accounting/A股财报披露知识.md)
     * [财报入门](Finance/Accounting/财报入门.md)
@@ -102,9 +108,12 @@
     * [复利](Finance/Accounting/复利.md)
     * [公司估值法](Finance/Accounting/公司估值法.md)
     * [重资产和轻资产](Finance/Accounting/重资产和轻资产.md)
+    * [财报三表联动速读](Finance/Accounting/财报三表联动速读.md)
+    * [ROE杜邦分析实战](Finance/Accounting/ROE杜邦分析实战.md)
+    * [估值与安全边际组合使用](Finance/Accounting/估值与安全边际组合使用.md)
 * 行业知识
     * [地产](Finance/Industry/地产.md)
     * [银行](Finance/Industry/bank.md)
     * [保险](Finance/Industry/insurance.md)
-
+    * [银行业财报阅读清单](Finance/Industry/银行业财报阅读清单.md)
 
